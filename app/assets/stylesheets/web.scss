@@ -74,7 +74,7 @@ a {
 }
 
 
-#Introduction{
+#introduction{
     padding-top: 100px;
     padding-bottom: 120px;
     margin: auto;
@@ -82,16 +82,16 @@ a {
     background-image: url("Introduction.png");
 }
 
-#Introduction .Introduction_group {
+#introduction .introduction_group {
     width: 800px;
     margin: auto;
 }
 
-#Introduction h2{
+#introduction h2{
     font-size: 36px;
 }
 
-#Introduction p{
+#introduction p{
     font-size: 18px;
 }
 
@@ -135,7 +135,6 @@ a {
     font-size: 26px;
     padding-right: 60px;
 }
-
 
 /* ここからタブ ================================ */
 
@@ -194,17 +193,17 @@ input:checked + .tab_class + .content_class {
     padding-bottom: 30px;
 }
 
-.contents-merit_g {
+.contents-pros_g {
     width: 800px;
     margin: auto;
 }
 
-.contents-merit_k {
+.contents-pros_k {
     width: 800px;
     margin: auto;
 }
 
-.merit-items {
+.pros-items {
     float:left;
     width: 30%;
     margin: auto;
@@ -234,7 +233,7 @@ input:checked + .tab_class + .content_class {
     width: 800px;
 }
 
-.merit-items img {
+.pros-items img {
     width: 30%;
 }
 
