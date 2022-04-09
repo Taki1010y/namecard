@@ -109,6 +109,7 @@ a {
     text-decoration: none;
 }
 
+/* ここからintroduction ================================ */
 
 #introduction{
     padding-top: 100px;
@@ -131,9 +132,7 @@ a {
     font-size: 18px;
 }
 
-
-
-
+/* ここからoverview ================================ */
 
 #overview {
     background-image: url("overview.png");
@@ -141,7 +140,6 @@ a {
     position: relative;
     padding-top: 60px;
     padding-bottom: 120px;
-
 }
 
 .overview_group {
@@ -158,6 +156,7 @@ a {
     font-size: 18px;
 }
 
+/* ここからconversionarea ================================ */
 
 #conversionarea {
     background-color: white;
@@ -203,7 +202,7 @@ input:checked + .tab_class {
     background-color: rgb(71,169,210);
     color: aliceblue;
 }
-   
+
 .content_class {
     display: none;
     width: 100%;
@@ -214,7 +213,6 @@ input:checked + .tab_class {
 input:checked + .tab_class + .content_class {
     display: block;
 }
-
 
 /* ここまでタブ ================================ */
 
@@ -282,7 +280,7 @@ input:checked + .tab_class + .content_class {
     margin: auto;
 }
 
-
+/* ここからfooter ================================ */
 
 footer {
     background-color: rgb(227, 250, 241);
