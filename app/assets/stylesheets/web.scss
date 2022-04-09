@@ -2,6 +2,35 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+    width: 100%;
+    margin: auto;
+}
+
+.fv{
+    background-image: url("/fv.png");
+    width: 100%;
+    height: 745px;
+    margin: 0;
+    background-size: cover;
+}
+
+.fv h1{
+    color: white;
+    font-size: 70px;
+    letter-spacing: 10px;
+    padding-top: 200px;
+}
+
+.fv p{
+    color: rgb(0,0,122);
+    font-size: 18px;
+    letter-spacing: 10px;
+    padding-top: 10px;
+}
+
+/* ここからheader ================================ */
+
 header {
     height: 65px;
     width: 100%;
@@ -23,33 +52,40 @@ header img {
     float: right;
 }
 
-
-body {
-    width: 100%;
-    margin: auto;
+.button01 {
+    display:inline-block;
+    margin-top: 10px;
+    margin-right: 20px;
 }
 
-.fv{
-    background-image: url("/fv.png");
-    width: 100%;
-    height: 745px;
-    background-size: cover;
-}
-
-.fv h1{
+.button01 a {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 1em 2em;
+    width: 200px;
     color: white;
-    font-size: 70px;
-    letter-spacing: 10px;
-    padding-top: 200px;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: rgb(255,110,0);
+    border-radius: 50vh;
 }
 
-.fv p{
-    color: rgb(0,0,122);
-    font-size: 18px;
-    letter-spacing: 10px;
-    padding-top: 10px;
+.button02 a {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 1em 2em;
+    line-height: 10px;
+    width: 200px;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: rgb(255,110,0);
+    border-radius: 50vh;
 }
 
+/* ここからnav ================================ */
 
 nav {
     background-color: rgb(255,110,0);
@@ -236,6 +272,16 @@ input:checked + .tab_class + .content_class {
 .pros-items img {
     width: 30%;
 }
+
+/* ここからボタンエリア ================================ */
+
+.buttonarea {
+    background-color: white;
+    padding-top: 60px;
+    padding-bottom: 80px;
+    margin: auto;
+}
+
 
 
 footer {
