@@ -1,16 +1,31 @@
-<h2>Forgot your password?</h2>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-5">
+      <h3 class="mt-3 md-3">パスワード再設定</h3>
+      <p>ご登録時のメールアドレスを入力してください。<br>パスワード再発行用のメールをお送りします。</p>
+      <hr>
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+        <div class="form-group">
+          <%=
+            f.email_field :email,
+            # 「present?」メソッドを使用したオブジェクトが存在すればtrueを返し、存在しなければfalseを返すメソッド
+            class: "form-control #{"is-invalid" if resource.errors.messages[:email].present?} sach-login-input",
+            autofocus: "true",
+            autocomplete: "email",
+            placeholder: "メールアドレス"
+          %>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "users/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          <% if resource.errors.messages[:email].present? %>
+              # divとは違って幅と高さを指定できない（文字の高さと大きさで決まる）
+              <span class="sach-error-message">
+                <strong><%= resource.errors.full_messages_for(:email).first %></strong>
+              </span>
+          <% end %>
+        </div>
+        <div class="form-group">
+          <%= f.submit "送信", class: "btn sach-submit-button w-100" %>
+        </div>
+      <% end %>
+    </div>
   </div>
-
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
-
-<%= render "users/shared/links" %>
+</div>
