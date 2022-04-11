@@ -37,8 +37,12 @@
     </div>
 
     <div id="conversionarea">
-        <h3>新規登録がお済みでない方はこちら</h3>
-        <button type="button">新規登録</button>
+        <h3 style="text-align:center">新規登録がお済みでない方はこちら</h3>
+        <div class="button01">
+            <%= link_to ("/users/sessions") do %>
+                <p>新規登録</p>
+            <% end %>
+        </div>
     </div>
 
 
@@ -160,10 +164,14 @@
 
     <div class="buttonarea">
         <div class="button01">
-            <a href="">新規登録</a>
+            <%= link_to ("/users/sessions") do %>
+                <p>新規登録</p>
+            <% end %>
         </div>
         <div class="button01">
-            <a href="">ログイン</a>
+            <%= link_to ("/users/registrations") do %>
+                <p>ログイン</p>
+            <% end %>
         </div>
     </div>
 

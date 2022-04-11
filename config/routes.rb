@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root :to => "web#index"
+  root :to => "users#sessions"
+  
 
   devise_for :users, :controllers => {
     :registrations => 'users/registrations',

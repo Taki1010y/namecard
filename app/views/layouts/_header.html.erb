@@ -3,7 +3,15 @@
         <img src="logo_color.png" alt="sach">
     </div>
     <div class="header-button">
-        <button type="button">新規登録</button>
-        <button type="button">ログイン</button>
+        <div class="button01">
+            <%= link_to ("/users/sessions") do %>
+                <p style="text-align: center">新規登録</p>
+            <% end %>
+        </div>
+        <div class="button01">
+            <%= link_to ("/users/registrations") do %>
+                <p style="text-align: center">ログイン</p>
+            <% end %>
+        </div>
     </div>
 </header>
