@@ -4,14 +4,10 @@
     </div>
     <div class="header-button">
         <div class="button01">
-            <%= link_to ("/users/sessions") do %>
-                <p style="text-align: center">新規登録</p>
-            <% end %>
+            <p><%= link_to "ログイン", login_path, class: 'btn btn-default' %></p>
         </div>
         <div class="button01">
-            <%= link_to ("/users/registrations") do %>
-                <p style="text-align: center">ログイン</p>
-            <% end %>
+            <p><%= link_to "新規登録", signup_path, class: 'btn btn-default' %></p>
         </div>
     </div>
 </header>
