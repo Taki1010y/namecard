@@ -15,4 +15,19 @@ Rails.application.routes.draw do
     delete "logout", :to => "users/sessions#destroy"
   end
 
+  devise_for :cimpanles, :controllers => {
+    :registrations => 'cimpanles/registrations',
+    :sessions => 'cimpanles/sessions',
+    :passwords => 'cimpanles/passwords',
+    :confirmations => 'cimpanles/confirmations',
+  }
+
+  devise_scope :cimpanles do
+    get "signup_cimpanles", :to => "cimpanles/registrations#new"
+    get "login_cimpanles", :to => "cimpanles/sessions#new"
+    delete "logout_cimpanles", :to => "cimpanles/sessions#destroy"
+  end
+  
+  resources :products
+
 end

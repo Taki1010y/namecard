@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_27_141013) do
+ActiveRecord::Schema.define(version: 2022_04_12_174205) do
+
+  create_table "cimpanles", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "name", null: false
+    t.string "postal_code", null: false
+    t.string "address", null: false
+    t.string "phone", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_cimpanles_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_cimpanles_on_reset_password_token", unique: true
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name", null: false
