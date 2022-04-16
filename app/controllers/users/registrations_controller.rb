@@ -12,7 +12,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     super
-   end
+  end
 
   # GET /resource/edit
   # def edit
@@ -22,7 +22,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # PUT /resource
   def update
     super
-   end
+  end
 
   # DELETE /resource
   # def destroy

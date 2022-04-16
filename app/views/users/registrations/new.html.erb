@@ -53,7 +53,7 @@
 
           <% if resource.errors.messages[:email].present? %>
             <span class="sach-error-message">
-              <strong><%= resouece.errors.full_messages_for(:email).first %></strong>
+              <strong><%= resource.errors.full_messages_for(:email).first %></strong>
             </span>
           <% end %>
         </div>
@@ -63,7 +63,23 @@
         <%= f.label :postal_code, "", class: "col-md-5 col-form-label text-md-left" do %>
           郵便番号
           <span class="ml-1 sach-require-input-label">
-            <span class="sach-require-input-label-text">必須</span>
+            <span class="samazon-require-input-label-text">必須</span>
+            </span>
+            <% end %>
+            <div class="col-md-7">
+            <%=
+            f.text_field :postal_code,
+            class: "form-control #{"is-invalid" if resource.errors.messages[:postal_code].present? } samazon-login-input",
+            required: "",
+            placeholder: "150-0043"
+            %>
+            </div>
+            </div>
+            <div class="form-group row">
+            <%= f.label :address, "", class: "col-md-5 col-form-label text-md-left" do %>
+            住所
+            <span class="ml-1 samazon-require-input-label">
+            <span class="samazon-require-input-label-text">必須</span>
           </span>
         <% end %>
 
