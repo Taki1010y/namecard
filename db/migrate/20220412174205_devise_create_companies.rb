@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-class DeviseCreateCimpanles < ActiveRecord::Migration[5.2]
+class DeviseCreateCompanies < ActiveRecord::Migration[5.2]
   def change
-    create_table :cimpanles do |t|
+    create_table :companies do |t|
       ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
@@ -40,9 +40,9 @@ class DeviseCreateCimpanles < ActiveRecord::Migration[5.2]
       t.timestamps null: false
     end
 
-    add_index :cimpanles, :email,                unique: true
-    add_index :cimpanles, :reset_password_token, unique: true
-    # add_index :cimpanles, :confirmation_token,   unique: true
-    # add_index :cimpanles, :unlock_token,         unique: true
+    add_index :companies, :email,                unique: true
+    add_index :companies, :reset_password_token, unique: true
+    # add_index :companies, :confirmation_token,   unique: true
+    # add_index :companies, :unlock_token,         unique: true
   end
 end

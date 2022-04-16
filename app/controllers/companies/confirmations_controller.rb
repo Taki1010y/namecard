@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Cimpanles::ConfirmationsController < Devise::ConfirmationsController
+class Companies::ConfirmationsController < Devise::ConfirmationsController
   # GET /resource/confirmation/new
   # def new
   #   super

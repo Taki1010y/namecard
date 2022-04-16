@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Cimpanles::PasswordsController < Devise::PasswordsController
+class Companies::PasswordsController < Devise::PasswordsController
   # GET /resource/password/new
   # def new
   #   super

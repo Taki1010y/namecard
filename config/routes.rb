@@ -6,26 +6,29 @@ Rails.application.routes.draw do
     :registrations => 'users/registrations',
     :sessions => 'users/sessions',
     :passwords => 'users/passwords',
-    :confirmations => 'users/confirmations'
+    :confirmations => 'users/confirmations',
+    :creations => 'users/creations'
   }
 
   devise_scope :user do
     get "signup", :to => "users/registrations#new"
+    get "verify", :to => "users/registrations#verify"
     get "login", :to => "users/sessions#new"
     delete "logout", :to => "users/sessions#destroy"
+    get "creation_screen", :to => "users/creations#new"
   end
 
-  devise_for :cimpanles, :controllers => {
-    :registrations => 'cimpanles/registrations',
-    :sessions => 'cimpanles/sessions',
-    :passwords => 'cimpanles/passwords',
-    :confirmations => 'cimpanles/confirmations',
+  devise_for :companies, :controllers => {
+    :registrations => 'companies/registrations',
+    :sessions => 'companies/sessions',
+    :passwords => 'companies/passwords',
+    :confirmations => 'companies/confirmations',
   }
 
-  devise_scope :cimpanles do
-    get "signup_cimpanles", :to => "cimpanles/registrations#new"
-    get "login_cimpanles", :to => "cimpanles/sessions#new"
-    delete "logout_cimpanles", :to => "cimpanles/sessions#destroy"
+  devise_scope :company do
+    get "signup_company", :to => "companies/registrations#new"
+    get "login_company", :to => "companies/sessions#new"
+    delete "logout_company", :to => "companies/sessions#destroy"
   end
   
   resources :products
