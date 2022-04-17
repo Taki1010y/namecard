@@ -30,7 +30,5 @@ Rails.application.routes.draw do
     get "login_company", :to => "companies/sessions#new"
     delete "logout_company", :to => "companies/sessions#destroy"
   end
-  
-  resources :products
 
 end
