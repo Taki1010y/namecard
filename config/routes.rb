@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root :to => "web#index"
   
-
   devise_for :users, :controllers => {
     :registrations => 'users/registrations',
     :sessions => 'users/sessions',
@@ -30,5 +29,6 @@ Rails.application.routes.draw do
     get "login_company", :to => "companies/sessions#new"
     delete "logout_company", :to => "companies/sessions#destroy"
   end
+  resources :products
 
 end
