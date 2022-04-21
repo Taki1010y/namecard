@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_16_072739) do
+ActiveRecord::Schema.define(version: 2022_04_20_173325) do
 
   create_table "companies", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,6 +27,10 @@ ActiveRecord::Schema.define(version: 2022_04_16_072739) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string "unconfirmed_email"
+    t.string "name"
+    t.string "postal_code"
+    t.string "address"
+    t.string "phone"
     t.index ["email"], name: "index_companies_on_email", unique: true
     t.index ["reset_password_token"], name: "index_companies_on_reset_password_token", unique: true
   end

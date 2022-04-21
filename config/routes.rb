@@ -26,9 +26,10 @@ Rails.application.routes.draw do
 
   devise_scope :company do
     get "signup_company", :to => "companies/registrations#new"
+    get "verify_company", :to => "companies/registrations#verify"
     get "login_company", :to => "companies/sessions#new"
     delete "logout_company", :to => "companies/sessions#destroy"
+    get "creation_screen_company", :to => "companies/creations#new"
   end
-  resources :products
 
 end

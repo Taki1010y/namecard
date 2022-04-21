@@ -1,27 +1,27 @@
 # frozen_string_literal: true
 
 class AddDeviseToCompanies < ActiveRecord::Migration[5.2]
-  def self.up
+  def change
     create_table :companies do |t|
-      ## Database authenticatable
+      ## Database authenticatable コメントアウトさせた
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
 
-      ## Recoverable
+      ## Recoverable コメントアウトさせた
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at
 
-      ## Rememberable
+      ## Rememberable コメントアウトさせた
       t.datetime :remember_created_at
 
-      # Trackable ユーザーの最新ログイン時間のデータを残す
+      # Trackable ユーザーの最新ログイン時間のデータを残す コメントアウトさせた
       t.integer  :sign_in_count, default: 0, null: false
       t.datetime :current_sign_in_at
       t.datetime :last_sign_in_at
       t.string   :current_sign_in_ip
       t.string   :last_sign_in_ip
 
-      # Confirmabler
+      # Confirmabler コメントアウトさせた
       t.string   :confirmation_token
       t.datetime :confirmed_at
       t.datetime :confirmation_sent_at
@@ -37,15 +37,15 @@ class AddDeviseToCompanies < ActiveRecord::Migration[5.2]
       # t.timestamps null: false
     end
 
-    add_index :companies, :email,                unique: true
-    add_index :companies, :reset_password_token, unique: true
+    add_index :companies, :email,                unique: true 
+    add_index :companies, :reset_password_token, unique: true 
     # add_index :companies, :confirmation_token,   unique: true
     # add_index :companies, :unlock_token,         unique: true
   end
 
-  def self.down
+  #def self.down
     # By default, we don't want to make any assumption about how to roll back a migration when your
     # model already existed. Please edit below which fields you would like to remove in this migration.
-    raise ActiveRecord::IrreversibleMigration
-  end
+    #raise ActiveRecord::IrreversibleMigration
+  #end
 end
