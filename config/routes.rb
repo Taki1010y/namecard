@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root :to => "web#index"
+  get 'detail' => "detail#index"
+  get 'register' => "register#index"
   
   devise_for :users, :controllers => {
     :registrations => 'users/registrations',
