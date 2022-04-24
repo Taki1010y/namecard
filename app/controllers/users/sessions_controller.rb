@@ -19,7 +19,8 @@ class Users::SessionsController < Devise::SessionsController
   # end
 
   def after_sign_in_path_for(user)
-    products_path
+    # FIXME 遷移先画面ができたら遷移させる。
+    root_path
   end
 
   def after_sign_out_path_for(user)
