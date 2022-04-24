@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_23_183748) do
+ActiveRecord::Schema.define(version: 2022_04_24_153146) do
 
   create_table "companies", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -51,6 +51,8 @@ ActiveRecord::Schema.define(version: 2022_04_23_183748) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string "unconfirmed_email"
+    t.string "school"
+    t.integer "age"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
