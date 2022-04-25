@@ -1,0 +1,14 @@
+<div class="profile">
+    <%= form_tag("/namecard/post_name") do %>
+        <p>名刺作成画面</p>
+        <input type="text" name="family_name" placeholder="氏名を入力してください" value="">
+
+        <p>学校名</p>
+        <input type="text" name="school_name" placeholder="学校名を入力してください" value="">
+
+        <p>学科</p>
+        <input type="text" name="department_name" placeholder="学科名を入力してください" value="">
+        
+        <input type="submit" value="決定">
+    <% end %>
+</div>

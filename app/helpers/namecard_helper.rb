@@ -1,0 +1,2 @@
+module NamecardHelper
+end
