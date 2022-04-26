@@ -1,2 +1,2 @@
-class Users::Mailer < Devise::Mailer
+class Companies::Mailer < Devise::Mailer
 end
