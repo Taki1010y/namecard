@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
+  before_action :set_homes_all, only: [:index, :new]
+
   def index
-    @homes = Home.all
   end
 
   def new
@@ -16,9 +17,16 @@ class HomeController < ApplicationController
   end
 end
 
+def show
+end
+
 private
   def home_params
-    params.permit(:name, :school, :address, :phone, :department, :favorite, :title, :caption)
+    params.require(:home).permit(:name, :school, :address, :phone, :department, :favorite, :title, :caption)
+  end
+
+  def set_homes_all
+    @homes = Home.all
   end
 
 end

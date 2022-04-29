@@ -1,6 +1,6 @@
 <h1>入力</h1>
 
-<%= form_with url: home_index_path do |f| %>
+<%= form_with model: @home ,url: home_index_path,  method: :post do |f| %>
     <p>
         <%= f.label :name, "氏名" %><br>
         <%= f.text_field :name %>
