@@ -1,3 +1,32 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.card_contents {
+    background: linear-gradient(rgb(71,169,210), rgb(70,234,181));
+}
+
+.information_area h1 {
+    color: white;
+}
+
+.information_area {
+    margin: auto;
+    width: 1366px;
+    float: left;
+}
+
+.box_cardarea {
+    padding-bottom: 40px;
+    width: 200px;
+    background-color: white;
+}
+
+.card-image img {
+    width: 40%;
+    margin-left: 600px;
+}
+
+
+
+
+
+
+
+

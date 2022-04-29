@@ -11,7 +11,7 @@ class HomeController < ApplicationController
   def create
     @home = Home.new(home_params)
     if @home.save
-        render 'index'
+        redirect_to home_index_path
     else
         render 'new'
   end
