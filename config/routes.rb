@@ -3,8 +3,13 @@ Rails.application.routes.draw do
   get 'detail' => "detail#index"
   get 'register' => "register#index"
 
-  get 'namecard' => "namecard#index"
-  post 'namecard/post_name', to: 'namecard#post_name' 
+  get 'home' => "home#new"
+  get 'home_index', to: 'home#index'
+  post 'home_index', to: 'home#index'
+
+  get 'namecard' => "namecard#new"
+  post 'namecard_index', to: 'namecard#index' 
+  get 'namecard_index', to: 'namecard#index' 
   
   devise_for :users, :controllers => {
     :registrations => 'users/registrations',

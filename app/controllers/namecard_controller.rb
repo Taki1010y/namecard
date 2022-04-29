@@ -1,16 +1,24 @@
 class NamecardController < ApplicationController
   def index
-    @family_name = ""
+    @users = User.all
   end
 
-  def post_name
-    @family_name = params[:family_name]
-    @school_name = params[:school_name]
-    @school_name = params[:school_name]
-    render "namecard/page" and return
+  def new
+    @user = User.new
   end
 
-  def page
+  def create
+    @user = User.new(user_params)
+    if @user.save
+        render 'index'
+    else
+        render 'new'
+  end
+end
 
+
+private
+  def user_params
+    params.require(:user).permit(:name, :school, :department, :email, :tel)
   end
 end

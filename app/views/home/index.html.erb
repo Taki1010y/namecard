@@ -1,0 +1,15 @@
+<table>
+    <thead>
+        <tr>
+            <th>名前</th>
+            <th>タイトル</th>
+        </tr>
+    </thead>
+
+    <% @homes.each do |home| %>
+        <tr>
+            <td><%= home.name %></td>
+            <td><%= home.title %></td>
+        </tr>
+    <% end %>
+</table>
