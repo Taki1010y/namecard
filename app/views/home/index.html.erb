@@ -9,7 +9,13 @@
     <% @homes.each do |home| %>
         <tr>
             <td><%= home.name %></td>
+            <td><%= home.school %></td>
+            <td><%= home.department %></td>
+            <td><%= home.address %></td>
+            <td><%= home.phone %></td>
+            <td><%= home.favorite %></td>
             <td><%= home.title %></td>
+            <td><%= home.caption %></td>
         </tr>
     <% end %>
 </table>
