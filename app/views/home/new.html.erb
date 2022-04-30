@@ -25,6 +25,11 @@
                     <%= f.phone_field :phone %>
                 </p>
                 <p>
+                <%= f.label :image, "本人写真" %><br>
+                <%= f.file_field :image %>
+                </p>
+                
+                <p>
                     <%= f.label :favorite, "趣味" %><br>
                     <%= f.text_field :favorite %>
                 </p>

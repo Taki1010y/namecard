@@ -1,0 +1,45 @@
+<div class="namecard-area">
+    <div class="profile-contents">
+        <div class="profile-content-left">
+            <%= image_tag @home.image.url %>
+        </div>
+        <div class="profile-content-right">
+            <h2><%= @home.name %></h2>
+            <h3><%= @home.school %></h3>
+            <p><%= @home.department %></p>
+            <hr>
+            <p><%= @home.phone %></p>
+            <p><%= @home.address %></p>
+        </div>
+    </div>
+    <div class="profile-content-bottom">
+            <%= @home.favorite %>
+            <%= image_tag @home.image.url %>
+        </div>
+
+    <div class="work-contents">
+        <div class="work-title">
+            <h1 style="text-align:center">- 作品/実績 -</h1>
+        </div>
+        <div class="work-content-left">
+            <%= image_tag @home.image.url %>
+        </div>
+        <div class="work-content-right">
+            <h3><%= @home.title %></h3>
+            <p><%= @home.caption %></p>
+        </div>
+    </div>
+</div>
+
+<div class="buttonarea-approach">
+    <h2 style="text-align:center">approach</h2>
+
+    <div class="button-group">
+        <div class="button03">
+            <p style="text-align:center"><%= link_to "募集している企業を探す", root_path, class: 'btn btn-default' %></p>
+        </div>
+        <div class="button03">
+            <p style="text-align:center"><%= link_to "お気に入り一覧", root_path, class: 'btn btn-default' %></p>
+        </div>
+    </div>
+</div>

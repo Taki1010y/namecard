@@ -1,10 +1,63 @@
-.card_contents {
+.namecard-area {
     background: linear-gradient(rgb(71,169,210), rgb(70,234,181));
 }
 
-.information_area h1 {
+.profile-contents {
     color: white;
+    width: 1366px;
+    display:flex;
+    justify-content: center;
+    padding-top: 120px;
 }
+
+// profile画像
+
+.profile-content-left {
+    width: 400px;
+    height: 400px;
+}
+
+.profile-content-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+// ここまでprofile画像
+
+// profileテキスト
+
+.profile-content-right {
+    width: 250px;
+    margin-left: 60px;
+    display: inline-block;
+}
+
+.profile-content-right h2 {
+    font-size: 40px;
+}
+
+.profile-content-right h3 {
+    font-size: 32px;
+}
+
+.profile-content-right p {
+    font-size: 20px;
+}
+
+// ここまでprofileテキスト
+
+.profile-content-bottom {
+    clear: left;
+}
+
+// 作品/実績
+.work-title {
+    background-color: aqua;
+}
+
+
 
 .information_area {
     margin: auto;
@@ -18,15 +71,39 @@
     background-color: white;
 }
 
-.card-image img {
-    width: 40%;
-    margin-left: 600px;
+// .card-image img {
+//     width: 40%;
+//     margin-left: 600px;
+// }
+
+
+// index アプローチ
+.buttonarea-approach {
+    background-color: green;
+    padding-top: 60px;
+    padding-bottom: 80px;
 }
 
+.button-group {
+    margin: auto;
+    width: 800px;
+}
 
+.button03 {
+    display:inline-block;
+    margin-top: 10px;
+    margin-right: 20px;
+}
 
-
-
+.button03 p {
+    padding: 1em 2em;
+    width: 200px;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: rgb(255,110,0);
+    border-radius: 50vh;
+}
 
 
 
