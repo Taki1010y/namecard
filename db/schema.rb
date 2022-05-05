@@ -41,15 +41,15 @@ ActiveRecord::Schema.define(version: 2022_04_30_061130) do
     t.string "address"
     t.string "department"
     t.string "phone"
-    t.string "favorite"
+    t.string "favorite_a"
+    t.string "favorite_b"
+    t.string "favorite_c"
+    t.string "favorite_d"
     t.string "title"
     t.text "caption"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "image_profile"
-    t.string "image_work_first"
-    t.string "image_work_second"
-    t.string "image_work_third"
+    t.string "image"
   end
 
   create_table "users", force: :cascade do |t|

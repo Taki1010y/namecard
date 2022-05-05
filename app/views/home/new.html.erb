@@ -25,13 +25,16 @@
                     <%= f.phone_field :phone %>
                 </p>
                 <p>
-                <%= f.label :image_profile, "本人写真" %><br>
+                <%= f.label :image, "本人写真" %><br>
                 <%= f.file_field :image %>
                 </p>
                 
                 <p>
-                    <%= f.label :favorite, "趣味" %><br>
-                    <%= f.text_field :favorite %>
+                    <%= f.label :favorite_a, "趣味" %><br>
+                    <%= f.text_field :favorite_a %>
+                    <%= f.text_field :favorite_b %>
+                    <%= f.text_field :favorite_c %>
+                    <%= f.text_field :favorite_d %>
                 </p>
                 <p>
                     <%= f.label :title, "タイトル" %><br>

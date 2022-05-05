@@ -19,7 +19,7 @@ end
 
 private
   def home_params
-    params.require(:home).permit(:name, :school, :address, :phone, :department, :favorite, :title, :caption,:image_profile)
+    params.require(:home).permit(:name, :school, :address, :phone, :department, :favorite_a, :favorite_b, :favorite_c, :favorite_d, :title, :caption, :image)
   end
 
   def set_home
