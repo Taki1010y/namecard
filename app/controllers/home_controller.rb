@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   before_action :set_home, only: [:show, :edit, :update, :destroy]
+  
   def new
     @home = Home.new
   end
@@ -18,7 +19,7 @@ end
 
 private
   def home_params
-    params.require(:home).permit(:name, :school, :address, :phone, :department, :favorite, :title, :caption,:image)
+    params.require(:home).permit(:name, :school, :address, :phone, :department, :favorite, :title, :caption,:image_profile)
   end
 
   def set_home

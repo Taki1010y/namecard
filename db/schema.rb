@@ -46,7 +46,10 @@ ActiveRecord::Schema.define(version: 2022_04_30_061130) do
     t.text "caption"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "image"
+    t.string "image_profile"
+    t.string "image_work_first"
+    t.string "image_work_second"
+    t.string "image_work_third"
   end
 
   create_table "users", force: :cascade do |t|
