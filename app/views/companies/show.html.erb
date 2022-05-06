@@ -15,7 +15,6 @@
         <hr>
       </div>
 
-      <% if company_signed_in? %>
         <%= form_with model: @company do |f| %>
           <%= f.hidden_field :id, value: @company.id %>
           <%= f.hidden_field :name, value: @company.name %>
@@ -32,7 +31,6 @@
             </div>
           </div>
         <% end %>
-      <% end %>
 
     </div>
   </div>
