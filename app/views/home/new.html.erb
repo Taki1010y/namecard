@@ -1,54 +1,59 @@
 <div class="card_contents">
 
+<h1>名刺に必要な情報を入力してください。</h1>
     <div class="information_area">
-        <h1>名刺に必要な情報を入力してください。</h1>
-        <div class="box_cardarea">
+        <div class="cardarea">
             <%= form_with model: @home ,url: home_index_path,  method: :post do |f| %>
                 <p>
                     <%= f.label :name, "氏名" %><br>
-                    <%= f.text_field :name %>
+                    <%= f.text_field :name, size: "50" %>
                 </p>
+                <br>
                 <p>
                     <%= f.label :school, "学校名" %><br>
-                    <%= f.text_field :school %>
+                    <%= f.text_field :school, size: "50"  %>
                 </p>
+                <br>
                 <p>
                     <%= f.label :department, "学科" %><br>
-                    <%= f.text_field :department %>
+                    <%= f.text_field :department, size: "50"  %>
                 </p>
+                <br>
                 <p>
                     <%= f.label :address, "メールアドレス" %><br>
-                    <%= f.email_field :address %>
+                    <%= f.email_field :address, size: "50"  %>
                 </p>
+                <br>
                 <p>
                     <%= f.label :phone, "電話番号" %><br>
-                    <%= f.phone_field :phone %>
+                    <%= f.phone_field :phone, size: "50"  %>
                 </p>
+                <br>
                 <p>
                 <%= f.label :image, "本人写真" %><br>
-                <%= f.file_field :image %>
+                <%= f.file_field :image, size: "50"  %>
                 </p>
-                
+                <br>
                 <p>
                     <%= f.label :favorite_a, "趣味" %><br>
-                    <%= f.text_field :favorite_a %>
-                    <%= f.text_field :favorite_b %>
-                    <%= f.text_field :favorite_c %>
-                    <%= f.text_field :favorite_d %>
+                    <%= f.text_field :favorite_a, size: "24" %>
+                    <%= f.text_field :favorite_b, size: "24"  %>
+                    <%= f.text_field :favorite_c, size: "24"  %>
+                    <%= f.text_field :favorite_d, size: "24"  %>
                 </p>
+                <br>
                 <p>
                     <%= f.label :title, "タイトル" %><br>
-                    <%= f.text_field :title %>
+                    <%= f.text_field :title, size: "50"  %>
                 </p>
+                <br>
                 <p>
                     <%= f.label :caption, "見出し" %><br>
-                    <%= f.text_field :caption %>
+                    <%= f.text_field :caption, size: "50"  %>
                 </p>
+                <br>
                 <%= f.submit "登録する" %>
             <% end %>
-        </div>
-        <div class="card-image">
-            <img src="/namecard_image.jpg" alt="イメージ画像">
         </div>
     </div>
 
