@@ -17,7 +17,7 @@ class CompaniesController < ApplicationController
   def create
     @company = Company.new(company_params)
     @company.save
-    redirect_to companies_url @company
+    redirect_to company_url @company
   end
 
   def edit
