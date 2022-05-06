@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+
+  get 'search/index'
   root :to => "web#index"
   get 'detail' => "detail#index"
   get 'register' => "register#index"
 
   resources 'home'
+  resources :companies
 
   # get 'home' => "home#new"
   # get 'home_index', to: 'home#index'

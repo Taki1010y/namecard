@@ -1,0 +1,28 @@
+<h1>キャプション</h1>
+
+<div class="row">
+    <div class="col-9">
+    <div class="container mt-4">
+        <div class="row w-100">
+
+        <% @companies.each do |company|%>
+        <div class="col-3">
+            <%= link_to company_path(company) do %>
+            <%= image_tag "/dummy.png", class: "img-thumbnail"%>
+            <% end %>
+            <div class="row">
+                <div class="col-12">
+                    <p class="sach-company-label mt-2">
+                    <%= company.name %><br>
+                    <%= company.company_name %><br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <% end %>
+
+        </div>
+    </div>
+    <%= paginate @companies %>
+    </div>
+</div>

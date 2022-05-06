@@ -16,6 +16,12 @@ gem 'dotenv-rails'
 # 画像のアップロードができる
 gem 'carrierwave'
 
+# ページネーションを実装できる
+gem 'kaminari'
+
+# それらしい値を自動生成できる
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', ' 5.2.5'
 # Use sqlite3 as the database for Active Record

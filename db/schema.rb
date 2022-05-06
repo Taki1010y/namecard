@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_30_061130) do
+ActiveRecord::Schema.define(version: 2022_05_05_181913) do
+
+  create_table "categories", force: :cascade do |t|
+    t.string "work_category_name"
+    t.string "genre_name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "companies", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -31,6 +39,9 @@ ActiveRecord::Schema.define(version: 2022_04_30_061130) do
     t.string "postal_code"
     t.string "address"
     t.string "phone"
+    t.string "company_name"
+    t.integer "category_id"
+    t.index ["category_id"], name: "index_companies_on_category_id"
     t.index ["email"], name: "index_companies_on_email", unique: true
     t.index ["reset_password_token"], name: "index_companies_on_reset_password_token", unique: true
   end
