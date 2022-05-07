@@ -1,4 +1,7 @@
 <div class="namecard-area">
+    <div class="setting-icon">
+        <%= link_to image_tag("/setting_icon.png"), "/" %>
+    </div>
     <div class="profile-contents">
         <div class="profile-content-left">
             <%= image_tag @home.image.url %>
@@ -6,30 +9,37 @@
         <div class="profile-content-right">
             <h2><%= @home.name %></h2>
             <h3><%= @home.school %></h3>
-            <p><%= @home.department %></p>
+            <h4><%= @home.department %></h4>
             <hr>
-            <p><%= @home.phone %></p>
-            <p><%= @home.address %></p>
+            <p>tel   : <%= @home.phone %></p>
+            <p>email : <%= @home.address %></p>
         </div>
     </div>
-    <div class="profile-content-bottom">
-            <%= @home.favorite_a %>
-            <%= @home.favorite_b %>
-            <%= @home.favorite_c %>
-            <%= @home.favorite_d %>
-            <%= image_tag @home.image.url %>
-        </div>
 
-    <div class="work-contents">
-        <div class="work-title">
-            <h1 style="text-align:center">- 作品/実績 -</h1>
+    <div class="profile-content-bottom">
+        <div class="profile-content-bottom-right">
+            <h3>favorite ---------</h3>
+            <p>・<%= @home.favorite_a %></p>
+            <p>・<%= @home.favorite_b %></p>
+            <p>・<%= @home.favorite_c %></p>
+            <p>・<%= @home.favorite_d %></p>
         </div>
-        <div class="work-content-left">
+        <div class="profile-content-left">
             <%= image_tag @home.image.url %>
         </div>
-        <div class="work-content-right">
-            <h3><%= @home.title %></h3>
-            <p><%= @home.caption %></p>
+    </div>
+    <div class="work-title">
+            <h1 class="title" style="text-align:center">作品/実績</h1>
+    </div>
+    <div class="work-contents">
+        <div class="work-content">
+            <div class="work-content-left">
+                <%= image_tag @home.image.url %>
+            </div>
+            <div class="work-content-right">
+                <h3><%= @home.title %></h3>
+                <p><%= @home.caption %></p>
+            </div>
         </div>
     </div>
 </div>
