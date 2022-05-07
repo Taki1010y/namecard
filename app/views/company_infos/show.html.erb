@@ -1,0 +1,32 @@
+<div class="page-body">
+    <div class="group-contents">
+        <div class="image-content">
+            <%= image_tag @company_info.image.url %>
+        </div>
+        <div class="text-contents">
+            <div class="content">
+                <div class="main-content">
+                    <h1 class="main"><%= @company_info.name %></h1>
+                    <hr>
+                    <p>担当者</p>
+                    <h2><%= @company_info.company_id %></h2>
+                </div>
+                <div class="body_content">
+                    <div class="body-top-content">
+                        <h2>住所</h2>
+                        <%= @company_info.address %>
+                    </div>
+                    <div class="body-left-content">
+                        <h2>アクセス</h2>
+                        <%= @company_info.access %>
+                    </div>
+                    <div class="body-right-content">
+                        <h2>ホームページ</h2>
+                        <%= @company_info.url %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%= link_to "会社一覧に戻る", company_infos_path ,class: "top_link" %>
+</div>

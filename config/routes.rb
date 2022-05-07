@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   resources 'home'
   resources :companies
+  resources :company_infos
 
   # get 'home' => "home#new"
   # get 'home_index', to: 'home#index'

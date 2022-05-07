@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_05_181913) do
+ActiveRecord::Schema.define(version: 2022_05_07_093643) do
 
   create_table "categories", force: :cascade do |t|
     t.string "work_category_name"
@@ -44,6 +44,19 @@ ActiveRecord::Schema.define(version: 2022_05_05_181913) do
     t.index ["category_id"], name: "index_companies_on_category_id"
     t.index ["email"], name: "index_companies_on_email", unique: true
     t.index ["reset_password_token"], name: "index_companies_on_reset_password_token", unique: true
+  end
+
+  create_table "company_infos", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "address", null: false
+    t.string "access"
+    t.string "url"
+    t.integer "company_id"
+    t.integer "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image"
+    t.index ["company_id"], name: "index_company_infos_on_company_id"
   end
 
   create_table "homes", force: :cascade do |t|
