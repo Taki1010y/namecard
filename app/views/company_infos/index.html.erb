@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="container-box">
+        <div class="container">
+            <% @company_infos.each do |company_info|%>
+                <div class="group-body">
+                    <div class="group-main">
+                        <div class="main-image">
+                        </div>
+                        <div class="group-text">
+                            <p class="company-number">企業No.<%= company_info.id %></p>
+                            <div class="top-text">
+                                <h2><%= company_info.name %></h2>
+                                <hr>
+                                <p>担当者：<%= company_info.name %></p>
+                            </div>
+                            <div class="bottom-text">
+                            <%= link_to "詳しく見る", company_info_path(company_info) ,class: "show_link" %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </div>
+    <%= paginate @company_infos %>
+</div>

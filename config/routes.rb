@@ -7,7 +7,11 @@ Rails.application.routes.draw do
 
   resources 'home'
   resources :companies
-  resources :company_infos
+  resources :company_infos do
+    member do
+      get :favorite
+    end
+  end
 
   # get 'home' => "home#new"
   # get 'home_index', to: 'home#index'

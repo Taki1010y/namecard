@@ -51,15 +51,15 @@ art_categories = ["漫画家", "イラストレーター", "フォトグラフ�
         end
     end
 
-    company_ids = [*1..30]
+    company_info_ids = [*1..30]
     category_ids = [*1..18,*1..12]
     array_number = 0
 
-    company_ids.each do
-        company_name = Faker::Music::RockBand.name
-        Company.create(
-            name: company_name,
-            company_name: company_name,
+    company_info_ids.each do
+        company_info_name = Faker::Music::RockBand.name
+        CompanyInfo.create(
+            name: company_info_name,
+            genre_name: company_info_name,
             category_id: category_ids[array_number]
         )
         array_number += 1

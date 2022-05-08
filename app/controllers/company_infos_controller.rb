@@ -1,7 +1,8 @@
 class CompanyInfosController < ApplicationController
-    
+    before_action :company_info, only: [:favorite]
+
 def index
-    @company_infos = CompanyInfo.new
+    @company_infos = CompanyInfo.all.page(params[:page]).per(4)
 end
 
 def new
@@ -21,7 +22,17 @@ def create
     end
 end
 
+def favorite
+    current_user.toggle_like!(@company_info)
+    redirect_to company_info_url @company_info
+end
+
 private
+
+    def company_info
+        @company_info = CompanyInfo.find(params[:id])
+    end
+
     def company_info_params
         params.require(:company_info).permit(:name, :address, :access, :url, :company_id, :category_id, :image)
     end

@@ -1,0 +1,12 @@
+<div class="container">
+    <% work_category_names.each do |work_category_name| %>
+    <h2><%= work_category_name %></h2>
+    <% categories.each do |category| %>
+        <% if category.work_category_name == work_category_name %>
+        <label class="sach-sidebar-category-label">
+            <%= link_to category.genre_name, company_infos_path(category: category.id) %>
+        </label>
+        <% end %>
+    <% end %>
+    <% end %>
+</div>

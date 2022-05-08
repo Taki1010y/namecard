@@ -1,9 +1,5 @@
-// Place all the styles related to the company_infos controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 .page-body {
-    background-color: aqua;
+    background: linear-gradient(rgb(71,169,210), rgb(70,234,181));
     padding-top: 140px;
 }
 
@@ -15,7 +11,6 @@
 }
 
 // images デザイン
-
 .image-content {
     width: 400px;
     height: 400px;
@@ -33,7 +28,6 @@
 
 // text-contents
 .text-contents {
-
 }
 
 .content {
@@ -48,25 +42,7 @@
     height: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // link_to デザイン
-// link_to デザイン
-
 .top_link {
     display: flex;
     justify-content: space-between;
@@ -94,3 +70,110 @@
     text-decoration: none;
     background-color: rgb(71,169,210);
 }
+
+// index.html.erb
+// index.html.erb
+// index.html.erb
+
+.container-box {
+    margin: 0 auto;
+    width: 1366px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 100px;
+    margin-bottom: 120px;
+}
+
+.group-body {
+    width: 500px;
+    height: 230px;
+    border: 1px solid;
+    border-color: black;
+    background-color: white;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.main-image {
+    background-color: rgb(114, 114, 114);
+    width: 150px;
+    height: 190px;
+    margin-top: 20px;
+    margin-left: 20px;
+    float: left;
+}
+
+.group-text {
+    width: 300px;
+    float: left;
+    margin-left: 10px;
+}
+
+.company-number {
+    display: inline-block;
+    background-color: rgb(91, 91, 91);
+    width: 80px;
+    font-size: 14px;
+    line-height: 30px;
+    padding-left: 10px;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: -40px;
+    border-radius: 20px;
+    color: white;
+}
+
+.top-text h2{
+    font-size: 23px;
+    margin-left: 10px;
+}
+
+.top-text hr {
+    width: 280px;
+    margin-top: -15px;
+}
+
+.top-text p {
+    margin-left: 10px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 16px;
+    float: left;
+}
+
+// link_to デザイン
+.show_link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1em 2em;
+    width: 210px;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: rgb(132, 132, 132);
+    transition: 0.3s;
+}
+
+.show_link::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+    transform: rotate(45deg);
+}
+
+.show_link:hover {
+    text-decoration: none;
+    background-color: rgb(71,169,210);
+}
+
+
+
+
