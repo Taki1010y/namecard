@@ -9,7 +9,7 @@
                     <h1 class="main"><%= @company_info.name %></h1>
                     <hr>
                     <p>担当者</p>
-                    <h2><%= @company_info.company_id %></h2>
+                    <h2><%= @category_id %></h2>
                 </div>
                 <div class="body_content">
                     <div class="body-top-content">
@@ -26,11 +26,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-5">
-                <%= link_to favorite_company_info_path, class: "btn sach-favorite-button text-favorite w-100" do %>
-                
-                <% end %>
-            </div>
+            
 
         </div>
     </div>
