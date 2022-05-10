@@ -4,14 +4,6 @@ Rails.application.routes.draw do
   get 'register' => "register#index"
 
   resources 'home'
-
-  # get 'home' => "home#new"
-  # get 'home_index', to: 'home#index'
-  # post 'home_index', to: 'home#index'
-
-  # get 'namecard' => "namecard#new"
-  # post 'namecard_index', to: 'namecard#index' 
-  # get 'namecard_index', to: 'namecard#create' 
   
   devise_for :users, :controllers => {
     :registrations => 'users/registrations',
