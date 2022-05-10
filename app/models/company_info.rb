@@ -3,7 +3,7 @@ class CompanyInfo < ApplicationRecord
     validates :address, {presence: true}
     
     mount_uploader :image, ImageUploader
-    # acts_as_likeable
+    acts_as_likeable
 end
 
 # そのユーザーが「いいね」をつけていればtrueを返し、つけていなければfalseを返す。
