@@ -28,3 +28,39 @@
     .text-favorite {
         color: #0fbe9f;
     }
+
+    .sach-sidebar-category-label {
+        width: 200px;
+        height: 20px;
+        font-size: 13px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        display: inline-block;
+        letter-spacing: normal;
+        color: #ffffff;
+        }
+        
+    .sach-area {
+        width: 260px;
+        margin-top: 140px;
+        padding-left: 40px;
+        padding-bottom: 60px;
+        float: left;
+        background-color: #0fbe9f;
+    }
+
+    .sach-area h2{
+        color: #ffffff;
+        margin: 0;
+        margin-top: 30px;
+        padding: 0;
+        margin-left: 10px;
+    }
+
+    .sach-area hr {
+        width: 240px;
+        margin-left: -12px;
+        margin-top: -2px;
+    }

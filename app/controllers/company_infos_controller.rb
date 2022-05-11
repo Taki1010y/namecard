@@ -2,8 +2,10 @@ class CompanyInfosController < ApplicationController
     before_action :company_info, only: [:favorite]
 
 def index
-    @company_infos = CompanyInfo.all.page(params[:page]).per(4)
+    @company_infos = CompanyInfo.display_list(category_params, params[:page])
+    @category = Category.request_category(category_params)
     @categories = Category.all
+    @work_category_names = Category.work_categories
 end
 
 def new
@@ -37,4 +39,10 @@ private
     def company_info_params
         params.require(:company_info).permit(:name, :address, :access, :url, :company_id, :category_id, :image)
     end
+
+    def category_params
+        params[:category].present? ? params[:category]
+        : "none"
+    end
+
 end

@@ -150,6 +150,17 @@
 // index.html.erb
 // index.html.erb
 // index.html.erb
+.category-container h1 {
+    margin: 0;
+    margin-top: 120px;
+    padding: 0;
+    width: 1000px;
+}
+
+.area {
+    margin: 0 auto;
+    width: 1800px;
+}
 
 .container-box {
     margin: 0 auto;
@@ -218,6 +229,12 @@
     margin-top: 0;
     margin-bottom: 16px;
     font-size: 16px;
+    float: left;
+}
+
+// sidebar
+.category-container {
+    width: 400px;
     float: left;
 }
 
