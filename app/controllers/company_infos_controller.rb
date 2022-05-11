@@ -3,6 +3,7 @@ class CompanyInfosController < ApplicationController
 
 def index
     @company_infos = CompanyInfo.all.page(params[:page]).per(4)
+    @categories = Category.all
 end
 
 def new
