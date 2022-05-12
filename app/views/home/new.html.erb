@@ -3,7 +3,8 @@
 <h1>名刺に必要な情報を入力してください。</h1>
     <div class="information_area">
         <div class="cardarea">
-            <%= form_with model: @home ,url: home_index_path,  method: :post do |f| %>
+            <%= form_with model: @home, method: :post do |f| %>
+
                 <p>
                     <%= f.label :name, "氏名" %><br>
                     <%= f.text_field :name, size: "50" %>
