@@ -3,7 +3,7 @@
 <h1>名刺に必要な情報を入力してください。</h1>
     <div class="information_area">
         <div class="cardarea">
-            <%= form_with model: @home, method: :post do |f| %>
+            <%= form_with model: @home ,url: home_index_path,  method: :post do |f| %>
 
                 <p>
                     <%= f.label :name, "氏名" %><br>
@@ -43,16 +43,22 @@
                     <%= f.text_field :favorite_d, size: "24"  %>
                 </p>
                 <br>
+
+                <%= f.fields_for :portfolio do |portfolio| %>
                 <p>
-                    <%= f.label :title, "タイトル" %><br>
-                    <%= f.text_field :title, size: "50"  %>
+                    <%= portfolio.label :image, "実績写真1" %><br>
+                    <%= portfolio.file_field :image, size: "50"  %>
+                </p>
+                <p>
+                    <%= portfolio.label :title, "タイトル" %>
+                    <%= portfolio.text_field :title, size: "50" %>
                 </p>
                 <br>
                 <p>
-                    <%= f.label :caption, "見出し" %><br>
-                    <%= f.text_field :caption, size: "50"  %>
+                    <%= portfolio.label :caption, "見出し" %>
+                    <%= portfolio.text_field :caption, size: "50"  %>
                 </p>
-                <br>
+                <% end %>
                 <%= f.submit "登録する" %>
             <% end %>
         </div>

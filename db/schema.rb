@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_10_163124) do
+ActiveRecord::Schema.define(version: 2022_05_12_153909) do
 
   create_table "categories", force: :cascade do |t|
     t.string "work_category_name"
@@ -112,6 +112,7 @@ ActiveRecord::Schema.define(version: 2022_05_10_163124) do
     t.text "caption"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image"
     t.index ["home_id"], name: "index_portfolios_on_home_id", unique: true
   end
 
