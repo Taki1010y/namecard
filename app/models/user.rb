@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
           :recoverable, :rememberable, :validatable, :confirmable 
 
-  acts_as_liker
+  #acts_as_liker
 end
 
 # 商品に対して「いいね」をつける。
