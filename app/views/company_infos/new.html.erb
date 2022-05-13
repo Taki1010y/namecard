@@ -1,6 +1,7 @@
+<div class="new">
 <div class="new-container">
     <h1>会社を登録しましょう</h1>
-
+    <div class="new-contents">
     <%= form_with model: @company_info do |f| %>
         <div class="form-group">
             <%= f.label "会社名" %>
@@ -41,4 +42,6 @@
     <% end %>
 
     <%= link_to "会社一覧に戻る", company_infos_path %>
+    </div>
+</div>
 </div>

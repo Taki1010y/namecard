@@ -272,8 +272,45 @@
 // new.html.erb
 .new-container h1 {
     margin-top: 120px;
-    margin-bottom: 120px;
+    margin-bottom: 20px;
     padding: 0;
+}
+
+.card_contents h1{
+    color: white;
+}
+
+.new {
+    background: linear-gradient(rgb(71,169,210), rgb(70,234,181));
+    margin: 0;
+    padding: 0;
+}
+
+.new-contents {
+    width: 800px;
+    margin: 0 auto;
+    padding: 40px 0;
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.form-group {
+    width: 400px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.cardarea p{
+    display: inline-block;
+    font-size: 20px;
+}
+
+f.text_field {
+    font-size: 20px;
+}
+
+.cardarea #submit {
+    width: 400px;
 }
 
 
