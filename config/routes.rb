@@ -4,9 +4,11 @@ Rails.application.routes.draw do
   root :to => "web#index"
   get 'detail' => "detail#index"
   get 'register' => "register#index"
+  get '/home', to: 'company_infos#index'
 
   resources 'home'
   resources :companies
+
   resources :company_infos do
     member do
       get :favorite
