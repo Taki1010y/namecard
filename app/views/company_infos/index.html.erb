@@ -32,6 +32,9 @@
                 <% end %>
             </div>
         </div>
+        <div class="setting-icon">
+        <%= link_to image_tag("/setting_icon.png"), edit_company_info_path(@company_infos) %>
+        </div>
         <%= paginate @company_infos %>
     </div>
 </div>
