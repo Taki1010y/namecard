@@ -44,7 +44,6 @@ def favorite
     redirect_to company_info_url @company_info
 end
 
-
 private
 
     def company_info

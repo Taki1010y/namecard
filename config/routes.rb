@@ -15,6 +15,10 @@ Rails.application.routes.draw do
     end
   end
 
+  # resources :company_infos do
+  #   resource :favorites, only: [:create, :destroy]
+  # end
+
   
 
   # get 'home' => "home#new"

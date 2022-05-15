@@ -10,7 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_08_103048) do
+ActiveRecord::Schema.define(version: 2022_05_15_135257) do
+
+  create_table "active_storage_attachments", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "record_type", null: false
+    t.integer "record_id", null: false
+    t.integer "blob_id", null: false
+    t.datetime "created_at", null: false
+    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
+    t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
+  end
+
+  create_table "active_storage_blobs", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "filename", null: false
+    t.string "content_type"
+    t.text "metadata"
+    t.bigint "byte_size", null: false
+    t.string "checksum", null: false
+    t.datetime "created_at", null: false
+    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string "work_category_name"
@@ -59,6 +80,13 @@ ActiveRecord::Schema.define(version: 2022_05_08_103048) do
     t.index ["company_id"], name: "index_company_infos_on_company_id"
   end
 
+  create_table "favorites", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "company_info_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "follows", force: :cascade do |t|
     t.string "follower_type"
     t.integer "follower_id"
@@ -84,6 +112,7 @@ ActiveRecord::Schema.define(version: 2022_05_08_103048) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image"
+    t.string "favorite_image"
   end
 
   create_table "likes", force: :cascade do |t|
@@ -104,6 +133,22 @@ ActiveRecord::Schema.define(version: 2022_05_08_103048) do
     t.datetime "created_at"
     t.index ["mentionable_id", "mentionable_type"], name: "fk_mentionables"
     t.index ["mentioner_id", "mentioner_type"], name: "fk_mentions"
+  end
+
+  create_table "portfolios", force: :cascade do |t|
+    t.integer "home_id"
+    t.string "title"
+    t.text "caption"
+    t.string "first_title"
+    t.text "first_caption"
+    t.string "second_title"
+    t.text "second_caption"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image"
+    t.string "first_image"
+    t.string "second_image"
+    t.index ["home_id"], name: "index_portfolios_on_home_id", unique: true
   end
 
   create_table "users", force: :cascade do |t|
