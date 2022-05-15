@@ -31,8 +31,8 @@
                 </p>
                 <br>
                 <p>
-                <%= f.label :images, "本人写真" %><br>
-                <%= f.file_field :images, multiple: true  %>
+                <%= f.label :image, "本人写真" %><br>
+                <%= f.file_field :image %>
                 </p>
                 <br>
                 <p>
@@ -41,6 +41,8 @@
                     <%= f.text_field :favorite_b, size: "24"  %>
                     <%= f.text_field :favorite_c, size: "24"  %>
                     <%= f.text_field :favorite_d, size: "24"  %>
+                    <%= f.label :favorite_image, "趣味写真" %><br>
+                    <%= f.file_field :favorite_image %>
                 </p>
                 <br>
 
@@ -56,6 +58,32 @@
                 <br>
                 <p>
                     <%= portfolio.label :caption, "見出し" %>
+                    <%= portfolio.text_field :caption, size: "50"  %>
+                </p>
+                <p>
+                    <%= portfolio.label :first_image, "実績写真2" %><br>
+                    <%= portfolio.file_field :first_image, size: "50"  %>
+                </p>
+                <p>
+                    <%= portfolio.label :first_title, "タイトル" %>
+                    <%= portfolio.text_field :title, size: "50" %>
+                </p>
+                <br>
+                <p>
+                    <%= portfolio.label :first_caption, "見出し" %>
+                    <%= portfolio.text_field :caption, size: "50"  %>
+                </p>
+                <p>
+                    <%= portfolio.label :second_image, "実績写真3" %><br>
+                    <%= portfolio.file_field :second_image, size: "50"  %>
+                </p>
+                <p>
+                    <%= portfolio.label :second_title, "タイトル" %>
+                    <%= portfolio.text_field :title, size: "50" %>
+                </p>
+                <br>
+                <p>
+                    <%= portfolio.label :second_caption, "見出し" %>
                     <%= portfolio.text_field :caption, size: "50"  %>
                 </p>
                 <% end %>

@@ -13,6 +13,7 @@
             <hr>
             <p>tel   : <%= @home.phone %></p>
             <p>email : <%= @home.address %></p>
+            
         </div>
     </div>
 
@@ -25,22 +26,42 @@
             <p>・<%= @home.favorite_d %></p>
         </div>
         <div class="profile-content-left">
-            <%= image_tag @home.image.url %>
+            <%= image_tag @home.favorite_image.url %>
         </div>
     </div>
     <div class="work-title">
             <h1 class="title" style="text-align:center">作品/実績</h1>
     </div>
     <div class="work-contents">
+    <div class="aaa">
         <div class="work-content">
             <div class="work-content-left">
+                <%= image_tag @home.portfolio.image.url %>
             </div>
             <div class="work-content-right">
-                <%= image_tag @home.portfolio.image.url %>
                 <h3><%= @home.portfolio.title %></h3>
                 <p><%= @home.portfolio.caption %></p>
             </div>
         </div>
+        <div class="work-content">
+            <div class="work-content-left">
+                <%= image_tag @home.portfolio.first_image.url %>
+            </div>
+            <div class="work-content-right">
+                <h3><%= @home.portfolio.first_title %></h3>
+                <p><%= @home.portfolio.first_caption %></p>
+            </div>
+        </div>
+        <div class="work-content">
+            <div class="work-content-left">
+                <%= image_tag @home.portfolio.second_image.url %>
+            </div>
+            <div class="work-content-right">
+                <h3><%= @home.portfolio.second_title %></h3>
+                <p><%= @home.portfolio.second_caption %></p>
+            </div>
+        </div>
+    </div>
     </div>
 </div>
 

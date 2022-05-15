@@ -117,16 +117,22 @@
 
 .work-content-right {
     width: 400px;
-    margin-left: 60px;
 }
 
 .work-content-right h3{
     font-size: 26px;
+    background-color: black;
+    color: azure;
+}
+
+.work-content-right p{
+    background-color: black;
 }
 
 .work-content-left {
     width: 300px;
     height: 300px;
+    float: left;
 }
 
 .work-content-left img {
@@ -141,7 +147,16 @@
     display:flex;
     justify-content: center;
     padding-top: 140px;
-    background: linear-gradient(rgb(71,169,210), rgb(70,234,181))
+    background: linear-gradient(rgb(71,169,210), rgb(70,234,181));
+}
+
+.work-content {
+    margin: auto;
+    width: 800px;
+}
+
+.aaa {
+    width: 1000px;
 }
 
 // アプローチ

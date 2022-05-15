@@ -26,9 +26,52 @@
         </div>
         <div class="work-contents">
             <div class="work-content">
-                <div class="work-content-right">
-
-                </div>
+                <%= f.fields_for :portfolio do |portfolio| %>
+                    <div class="work-content-right">
+                        <p>
+                            <%= portfolio.label :image, "実績写真1" %><br>
+                            <%= portfolio.file_field :image, size: "50"  %>
+                        </p>
+                        <p>
+                            <%= portfolio.label :title, "タイトル" %>
+                            <%= portfolio.text_field :title, size: "50" %>
+                        </p>
+                        <br>
+                        <p>
+                            <%= portfolio.label :caption, "見出し" %>
+                            <%= portfolio.text_field :caption, size: "50"  %>
+                        </p>
+                    </div>
+                    <div class="work-content-right">
+                        <p>
+                            <%= portfolio.label :first_image, "実績写真1" %><br>
+                            <%= portfolio.file_field :first_image, size: "50"  %>
+                        </p>
+                        <p>
+                            <%= portfolio.label :first_title, "タイトル" %>
+                            <%= portfolio.text_field :first_title, size: "50" %>
+                        </p>
+                        <br>
+                        <p>
+                            <%= portfolio.label :first_caption, "見出し" %>
+                            <%= portfolio.text_field :first_caption, size: "50"  %>
+                        </p>
+                        <div class="work-content-right">
+                        <p>
+                            <%= portfolio.label :second_image, "実績写真1" %><br>
+                            <%= portfolio.file_field :second_image, size: "50"  %>
+                        </p>
+                        <p>
+                            <%= portfolio.label :second_title, "タイトル" %>
+                            <%= portfolio.text_field :second_title, size: "50" %>
+                        </p>
+                        <br>
+                        <p>
+                            <%= portfolio.label :second_caption, "見出し" %>
+                            <%= portfolio.text_field :second_caption, size: "50"  %>
+                        </p>
+                    </div>
+                <% end %>
             </div>
         </div>
         <%= f.submit "変更する" %>
