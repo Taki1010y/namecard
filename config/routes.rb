@@ -15,6 +15,8 @@ Rails.application.routes.draw do
     end
   end
 
+  
+
   # get 'home' => "home#new"
   # get 'home_index', to: 'home#index'
   # post 'home_index', to: 'home#index'

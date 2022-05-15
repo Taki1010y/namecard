@@ -28,6 +28,11 @@
             </div>
             
         </div>
+        <div class="col-5">
+            <%= link_to favorite_company_info_path, class: "btn sach-favorite-button text-favorite w-100" do %>
+            <i class="fa fa-heart"></i><%= current_user.likes?(@company_info) ? "お気に入り解除" : "お気に入り" %>
+            <% end %>
+        </div>
     </div>
     <%= link_to "会社一覧に戻る", company_infos_path ,class: "top_link" %>
 </div>
