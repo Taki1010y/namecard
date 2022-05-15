@@ -2,22 +2,23 @@
     <%= form_with model: @home ,url: home_path(@home),  method: :patch do |f| %>
         <div class="profile-contents">
             <div class="profile-content-right">
-                <textarea><%= @home.name %></textarea>
-                <textarea><%= @home.school %></textarea>
-                <textarea><%= @home.department %></textarea>
+                <%= f.text_field :name %>
+                <%= f.text_field :school %>
+                <%= f.text_field :department %>
+                <%= f.file_field :image %>
                 <hr>
-                <textarea><%= @home.phone %></textarea>
-                <textarea><%= @home.address %></textarea>
+                <%= f.phone_field :phone %>
+                <%= f.email_field :address %>
             </div>
         </div>
 
         <div class="profile-content-bottom">
             <div class="profile-content-bottom-right">
                 <h3>favorite ---------</h3>
-                <textarea><%= @home.favorite_a %></textarea>
-                <textarea><%= @home.favorite_b %></textarea>
-                <textarea><%= @home.favorite_c %></textarea>
-                <textarea><%= @home.favorite_d %></textarea>
+                <%= f.text_field :favorite_a %>
+                <%= f.text_field :favorite_b %>
+                <%= f.text_field :favorite_c %>
+                <%= f.text_field :favorite_d %>
             </div>
         </div>
         <div class="work-title">
@@ -26,8 +27,7 @@
         <div class="work-contents">
             <div class="work-content">
                 <div class="work-content-right">
-                    <textarea><%= @home.title %></textarea>
-                    <textarea><%= @home.caption %></textarea>
+
                 </div>
             </div>
         </div>
