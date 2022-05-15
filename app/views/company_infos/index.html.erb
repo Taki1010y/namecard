@@ -1,4 +1,10 @@
 <div class="area">
+    <li class="nav-item mr-5">
+        <%= link_to favorite_users_path, class: "nav-link" do %>
+            <p>一覧</p>
+        <% end %>
+    </li>
+    
     <div class="category_area">
         <%= render partial: "layouts/sidebar", locals: { categories: @categories, work_category_names: @work_category_names } %>
     </div>

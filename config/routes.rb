@@ -40,7 +40,6 @@ Rails.application.routes.draw do
     delete "logout", :to => "users/sessions#destroy"
     get "creation_screen", :to => "users/creations#new"
     
-    
   end
 
   devise_for :companies, :controllers => {
@@ -56,6 +55,12 @@ Rails.application.routes.draw do
     get "login_company", :to => "companies/sessions#new"
     delete "logout_company", :to => "companies/sessions#destroy"
     get "creation_screen_company", :to => "companies/creations#new"
+  end
+
+  resource :users, only: [:edit, :update] do
+    collection do
+      get  "favorite", :to => "users#favorite"
+    end
   end
 
 end

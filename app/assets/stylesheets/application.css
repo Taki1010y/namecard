@@ -64,3 +64,8 @@
         margin-left: -12px;
         margin-top: -2px;
     }
+
+    .samazon-favorite-add-cart {
+        border-radius: 2px;
+        background-color: #0fbe9f;
+    }
