@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources 'home'
   resources :companies
-
+  get 'company_infos/index'
   resources :company_infos do
     member do
       get :favorite

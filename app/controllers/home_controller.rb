@@ -15,6 +15,7 @@ class HomeController < ApplicationController
   end
 
 def show
+  @home = Home.find(params[:id])
 end
 
 def company_infos
