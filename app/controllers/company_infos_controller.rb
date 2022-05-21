@@ -1,5 +1,5 @@
 class CompanyInfosController < ApplicationController
-    before_action :company_info, only: [:favorite]
+    before_action :set_company_info, only: [:favorite]
 
 def index
     @company_infos = CompanyInfo.display_list(category_params, params[:page])
@@ -46,7 +46,7 @@ end
 
 private
 
-    def company_info
+    def set_company_info
         @company_info = CompanyInfo.find(params[:id])
     end
 

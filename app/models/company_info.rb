@@ -14,6 +14,12 @@ class CompanyInfo < ApplicationRecord
         end
     }
 
+    belongs_to :user
+    has_many :favorites, dependent: :destroy
+
+    # has_many :business_cards
+    # has_many :homes, through: :business_cards
+    # accepts_nested_attributes_for :todo_tags
 
     mount_uploader :image, ImageUploader
     acts_as_likeable

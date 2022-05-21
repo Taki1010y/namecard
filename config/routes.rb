@@ -15,9 +15,9 @@ Rails.application.routes.draw do
     end
   end
 
-  # resources :company_infos do
-  #   resource :favorites, only: [:create, :destroy]
-  # end
+  resources :company_infos do
+    resource :favorites, only: [:create, :destroy]
+  end
 
   
 
@@ -61,10 +61,11 @@ Rails.application.routes.draw do
     get "creation_screen_company", :to => "companies/creations#new"
   end
 
-  resource :users, only: [:edit, :update] do
-    collection do
-      get  "favorite", :to => "users#favorite"
+  resources :users, only: [:edit, :update] do
+    member do
+      get  :favorite, :to => "users#favorite"
     end
   end
 
 end
+
