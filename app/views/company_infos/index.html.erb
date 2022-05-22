@@ -2,9 +2,9 @@
 
     
 
-    <li class="nav-item mr-5">
+    <li class="favo">
         <%= link_to favorite_user_path(current_user.id), class: "nav-link" do %>
-            <p>一覧</p>
+            <p>お気に入り一覧</p>
         <% end %>
     </li>
     
@@ -23,18 +23,18 @@
                 <% @company_infos.each do |company_info|%>
                     <div class="group-body">
                         <div class="group-main">
-                            <div class="main-image">
+                            <%= image_tag company_info.image.url %>
+                            
+                        </div>
+                        <div class="group-text">
+                            <p class="company-number">企業No.<%= company_info.id %></p>
+                            <div class="top-text">
+                                <h2><%= company_info.name %></h2>
+                                <hr>
+                                <p>担当者：<%= company_info.name %></p>
                             </div>
-                            <div class="group-text">
-                                <p class="company-number">企業No.<%= company_info.id %></p>
-                                <div class="top-text">
-                                    <h2><%= company_info.name %></h2>
-                                    <hr>
-                                    <p>担当者：<%= company_info.name %></p>
-                                </div>
-                                <div class="bottom-text">
+                            <div class="bottom-text">
                                 <%= link_to "詳しく見る", company_info_path(company_info) ,class: "show_link" %>
-                                </div>
                             </div>
                         </div>
                     </div>

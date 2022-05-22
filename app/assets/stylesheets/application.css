@@ -20,13 +20,18 @@
     }
 
     .sach-favorite-button {
+        float: left;
+        width: 200px;
+        line-height: 35px;
         border-radius: 2px;
+        border-radius: 20px 20px 20px 20px;
         border: solid 1px #0fbe9f;
         background-color: #ffffff;
     }
     
     .text-favorite {
         color: #0fbe9f;
+        padding-left: 20px;
     }
 
     .sach-sidebar-category-label {
