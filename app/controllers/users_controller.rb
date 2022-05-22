@@ -5,6 +5,8 @@ class UsersController < ApplicationController
     @favorites = @user.likees(CompanyInfo)
   end
 
+
+
 private
 	def set_user
 		@user = User.find(params[:id])

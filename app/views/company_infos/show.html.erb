@@ -33,6 +33,9 @@
             <i class="fa fa-heart"></i><%= current_user.likes?(@company_info) ? "お気に入り解除" : "お気に入り" %>
             <% end %>
         </div>
+        <div >
+            <%= link_to "応募する", company_infos_apply_path(current_user.id), class: "btn sach-entry-button" %>
+        </div>
     </div>
     <%= link_to "会社一覧に戻る", company_infos_path ,class: "top_link" %>
 </div>

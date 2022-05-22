@@ -2,7 +2,7 @@
 <div class="new-container">
     <h1>会社を登録しましょう</h1>
     <div class="new-contents">
-    <%= form_with model: @company_info do |f| %>
+    <%= form_with model: @company_info, url: company_infos_path,  method: :post do |f| %>
         <div class="form-group">
             <%= f.label "会社名" %>
             <%= f.text_field :name, class: "form-control" %>
@@ -40,8 +40,6 @@
 
         <%= f.submit "会社を登録", class:"btn btn-success" %>
     <% end %>
-
-    <%= link_to "会社一覧に戻る", company_infos_path %>
     </div>
 </div>
 </div>

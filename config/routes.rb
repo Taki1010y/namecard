@@ -19,7 +19,7 @@ Rails.application.routes.draw do
     resource :favorites, only: [:create, :destroy]
   end
 
-  
+  post 'company_infos/apply', to: 'company_infos#apply'
 
   # get 'home' => "home#new"
   # get 'home_index', to: 'home#index'

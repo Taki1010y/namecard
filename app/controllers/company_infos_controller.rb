@@ -44,6 +44,18 @@ def favorite
     redirect_to company_info_url @company_info
 end
 
+def apply
+    progress_status = ProgressStatus.new
+    progress_status.user_id = current_user.id
+    progress_status.company_info_id = params[:id]
+    if progress_status.save
+        redirect_to company_info_path(@company_info)
+    else
+        redirect_to company_info_path(@company_info)
+    end
+    
+end
+
 private
 
     def set_company_info
