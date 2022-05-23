@@ -34,7 +34,7 @@
             <% end %>
         </div>
         <div >
-            <%= link_to "entry", company_infos_apply_path(current_user.id, company_info.id), method: :post, class: "btn sach-entry-button" %>
+            <%= link_to "entry", company_infos_apply_path(current_user.id, @company_info), method: :post, class: "btn sach-entry-button" %>
         </div>
     </div>
     <%= link_to "会社一覧に戻る", company_infos_path ,class: "top_link" %>

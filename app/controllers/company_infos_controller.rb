@@ -53,7 +53,6 @@ def apply
     else
         redirect_to company_info_path(@company_info)
     end
-    
 end
 
 private
