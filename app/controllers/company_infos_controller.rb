@@ -1,5 +1,5 @@
 class CompanyInfosController < ApplicationController
-    before_action :set_company_info, only: [:favorite]
+    before_action :set_company_info, only: [:favorite, :show, :edit, :update,]
 
 def index
     @company_infos = CompanyInfo.display_list(category_params, params[:page])
@@ -13,7 +13,6 @@ def new
 end
 
 def show
-    @company_info = CompanyInfo.find(params[:id])
 end
 
 def create
@@ -26,12 +25,9 @@ def create
 end
 
 def edit
-    @company_info = CompanyInfo.find_by_id(params[:id])
 end
 
 def update
-    @company_info = CompanyInfo.find(params[:id])
-    
     if @company_info.update(company_info_params)
         redirect_to @company_info
     else
@@ -45,9 +41,10 @@ def favorite
 end
 
 def apply
+    @company_info = CompanyInfo.find(params[:company_info_id])
     progress_status = ProgressStatus.new
     progress_status.user_id = current_user.id
-    progress_status.company_info_id = params[:id]
+    progress_status.company_info_id = params[:company_info_id]
     if progress_status.save
         redirect_to company_info_path(@company_info)
     else

@@ -5,11 +5,11 @@ Rails.application.routes.draw do
   get 'detail' => "detail#index"
   get 'register' => "register#index"
   get '/home', to: 'company_infos#index'
-
+  
   resources 'home'
   resources :companies
-  get 'company_infos/index'
   resources :company_infos do
+    get '/apply', action: :apply, as: :apply
     member do
       get :favorite
     end
@@ -18,8 +18,6 @@ Rails.application.routes.draw do
   resources :company_infos do
     resource :favorites, only: [:create, :destroy]
   end
-
-  post 'company_infos/apply', to: 'company_infos#apply'
 
   # get 'home' => "home#new"
   # get 'home_index', to: 'home#index'

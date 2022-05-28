@@ -17,6 +17,8 @@ class CompanyInfo < ApplicationRecord
     belongs_to :user
     has_many :favorites, dependent: :destroy
 
+    has_many :progress_status
+    has_many :users, through: :progress_status
     # has_many :business_cards
     # has_many :homes, through: :business_cards
     # accepts_nested_attributes_for :todo_tags
