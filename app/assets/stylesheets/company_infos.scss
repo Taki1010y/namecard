@@ -180,6 +180,15 @@
 // index.html.erb
 // index.html.erb
 // index.html.erb
+.flash_text {
+    color: rgb(218, 94, 0);
+    font-size: 18px;
+    width: 100%;
+    position: fixed;
+    top: 60px;
+    z-index: 9;
+}
+
 .favo {
     margin-top: 80px;
     padding-left: 40px;

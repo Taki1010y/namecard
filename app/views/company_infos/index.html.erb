@@ -1,7 +1,5 @@
 <div class="area">
-
-    
-
+<p class="flash_text"><%=   flash[:notice]  %></p>
     <li class="favo">
         <%= link_to favorite_user_path(current_user.id), class: "nav-link" do %>
             <p>お気に入り一覧</p>

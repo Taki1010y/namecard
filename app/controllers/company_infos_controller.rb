@@ -46,9 +46,9 @@ def apply
     progress_status.user_id = current_user.id
     progress_status.company_info_id = params[:company_info_id]
     if progress_status.save
-        redirect_to company_info_path(@company_info)
+        redirect_to company_infos_path, notice: "送信完了しました。"
     else
-        redirect_to company_info_path(@company_info)
+        redirect_to @company_info, notice: "送信できません。"
     end
 end
 
