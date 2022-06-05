@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'applicants/index'
+  get 'applicants/show'
   get 'search/index'
   root :to => "web#index"
   get 'detail' => "detail#index"
