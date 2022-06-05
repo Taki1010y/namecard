@@ -48,7 +48,8 @@ def apply
     if progress_status.save
         redirect_to company_infos_path, notice: "送信完了しました。"
     else
-        redirect_to @company_info, notice: "送信できません。"
+        flash[:alert] = "エントリー済みのため操作を完了できません。"
+        render 'show'
     end
 end
 
