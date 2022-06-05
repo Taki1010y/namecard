@@ -5,29 +5,30 @@
         <div class="cardarea">
             <%= form_with model: @home ,url: home_index_path,  method: :post do |f| %>
 
+                <h2 class="profile-form-text">Profile</h2>
                 <p>
                     <%= f.label :name, "氏名" %><br>
-                    <%= f.text_field :name, size: "50" %>
+                    <%= f.text_field :name, placeholder: "名刺 太郎", size: "50" %>
                 </p>
                 <br>
                 <p>
                     <%= f.label :school, "学校名" %><br>
-                    <%= f.text_field :school, size: "50"  %>
+                    <%= f.text_field :school, placeholder: "日本名刺大学", size: "50"  %>
                 </p>
                 <br>
                 <p>
                     <%= f.label :department, "学科" %><br>
-                    <%= f.text_field :department, size: "50"  %>
+                    <%= f.text_field :department, placeholder: "経済学部", size: "50"  %>
                 </p>
                 <br>
                 <p>
                     <%= f.label :address, "メールアドレス" %><br>
-                    <%= f.email_field :address, size: "50"  %>
+                    <%= f.email_field :address, placeholder: "name-card@gmail.com", size: "50"  %>
                 </p>
                 <br>
                 <p>
                     <%= f.label :phone, "電話番号" %><br>
-                    <%= f.phone_field :phone, size: "50"  %>
+                    <%= f.phone_field :phone, placeholder: "090-1111-2222", size: "50"  %>
                 </p>
                 <br>
                 <p>
@@ -35,59 +36,69 @@
                 <%= f.file_field :image %>
                 </p>
                 <br>
+                <hr class="border-area">
+
+                <h2 class="favorite-form-text">Favorite</h2>
                 <p>
                     <%= f.label :favorite_a, "趣味" %><br>
-                    <%= f.text_field :favorite_a, size: "24" %>
-                    <%= f.text_field :favorite_b, size: "24"  %>
-                    <%= f.text_field :favorite_c, size: "24"  %>
-                    <%= f.text_field :favorite_d, size: "24"  %>
+                    <%= f.text_field :favorite_a, placeholder: "サッカー", size: "24" %>
+                    <%= f.text_field :favorite_b, placeholder: "お絵かき", size: "24"  %>
+                    <%= f.text_field :favorite_c, placeholder: "ドライブ", size: "24"  %>
+                    <%= f.text_field :favorite_d, placeholder: "昆虫採取", size: "24"  %>
+                    <br>
+                </p>
+                <p>
                     <%= f.label :favorite_image, "趣味写真" %><br>
                     <%= f.file_field :favorite_image %>
                 </p>
                 <br>
+                <hr class="border-area">
 
+                <h2 class="portfolio-form-text">Portfolio</h2>
                 <%= f.fields_for :portfolio do |portfolio| %>
                 <p>
                     <%= portfolio.label :image, "実績写真1" %><br>
                     <%= portfolio.file_field :image, size: "50"  %>
                 </p>
                 <p>
-                    <%= portfolio.label :title, "タイトル" %>
-                    <%= portfolio.text_field :title, size: "50" %>
+                    <%= portfolio.label :title, "実績1 タイトル" %>
+                    <%= portfolio.text_field :title, placeholder: "例：パッケージデザイン（優秀賞受賞）", size: "50" %>
                 </p>
                 <br>
                 <p>
-                    <%= portfolio.label :caption, "見出し" %>
-                    <%= portfolio.text_field :caption, size: "50"  %>
+                    <%= portfolio.label :caption, "実績1 見出し" %>
+                    <%= portfolio.text_area :caption, placeholder: "例：2022年に開催された調味料のパッケージコンテストにて「○○○○○○○○○の調味料」というテーマで…", size: "50"  %>
                 </p>
+                <hr class="border-dotted-area">
                 <p>
                     <%= portfolio.label :first_image, "実績写真2" %><br>
                     <%= portfolio.file_field :first_image, size: "50"  %>
                 </p>
                 <p>
-                    <%= portfolio.label :first_title, "タイトル" %>
-                    <%= portfolio.text_field :title, size: "50" %>
+                    <%= portfolio.label :first_title, "実績2 タイトル" %>
+                    <%= portfolio.text_field :first_title, placeholder: "例：A3チラシ（コンペティション採用）", size: "50" %>
                 </p>
                 <br>
                 <p>
-                    <%= portfolio.label :first_caption, "見出し" %>
-                    <%= portfolio.text_field :caption, size: "50"  %>
+                    <%= portfolio.label :first_caption, "実績2 見出し" %>
+                    <%= portfolio.text_area :first_caption, placeholder: "例：〇〇食品様の新商品「◯◯◯◯◯◯◯」の商品宣伝のためのプロモーションツールのコンペティションに参加し採用されました",  size: "50"  %>
                 </p>
+                <hr class="border-dotted-area">
                 <p>
                     <%= portfolio.label :second_image, "実績写真3" %><br>
                     <%= portfolio.file_field :second_image, size: "50"  %>
                 </p>
                 <p>
-                    <%= portfolio.label :second_title, "タイトル" %>
-                    <%= portfolio.text_field :title, size: "50" %>
+                    <%= portfolio.label :second_title, "実績3 タイトル" %>
+                    <%= portfolio.text_field :second_title, placeholder: "例：広告デザイン（最優秀賞受賞）", size: "50" %>
                 </p>
                 <br>
                 <p>
-                    <%= portfolio.label :second_caption, "見出し" %>
-                    <%= portfolio.text_field :caption, size: "50"  %>
+                    <%= portfolio.label :second_caption, "実績3 見出し" %>
+                    <%= portfolio.text_area :second_caption, placeholder: "例：2022年に開催された調味料のパッケージコンテストにて「○○○○○○○○○の調味料」というテーマで…", size: "50"  %>
                 </p>
                 <% end %>
-                <%= f.submit "登録する" %>
+                <%= f.submit "登録する", class: "push-btn"  %>
             <% end %>
         </div>
     </div>

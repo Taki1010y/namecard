@@ -19,7 +19,8 @@
 
     <div class="profile-content-bottom">
         <div class="profile-content-bottom-right">
-            <h3>favorite ---------</h3>
+            <h3>Favorite</h3>
+            <hr class="profile-content-hr">
             <p>・<%= @home.favorite_a %></p>
             <p>・<%= @home.favorite_b %></p>
             <p>・<%= @home.favorite_c %></p>
@@ -29,9 +30,8 @@
             <%= image_tag @home.favorite_image.url %>
         </div>
     </div>
-    <div class="work-title">
-            <h1 class="title" style="text-align:center">作品/実績</h1>
-    </div>
+
+    <h1 class="title" style="text-align:center">Portfolio</h1>
     <div class="work-contents">
     <div class="aaa">
         <div class="work-content">
@@ -39,17 +39,19 @@
                 <%= image_tag @home.portfolio.image.url %>
             </div>
             <div class="work-content-right">
-                <h3><%= @home.portfolio.title %></h3>
-                <p><%= @home.portfolio.caption %></p>
+                <hr class="border-hr">
+                <h3  style="text-align:center"><%= @home.portfolio.title %></h3>
+                <textarea><%= @home.portfolio.caption %></textarea>
             </div>
         </div>
         <div class="work-content">
-            <div class="work-content-left">
-                <%= image_tag @home.portfolio.first_image.url %>
-            </div>
             <div class="work-content-right">
+                <hr class="border-hr">
                 <h3><%= @home.portfolio.first_title %></h3>
-                <p><%= @home.portfolio.first_caption %></p>
+                <textarea><%= @home.portfolio.first_caption %></textarea>
+            </div>
+            <div class="work-content-left-under">
+                <%= image_tag @home.portfolio.first_image.url %>
             </div>
         </div>
         <div class="work-content">
@@ -57,8 +59,9 @@
                 <%= image_tag @home.portfolio.second_image.url %>
             </div>
             <div class="work-content-right">
-                <h3><%= @home.portfolio.second_title %></h3>
-                <p><%= @home.portfolio.second_caption %></p>
+                <hr class="border-hr">
+                <h3 style="text-align:center"><%= @home.portfolio.second_title %></h3>
+                <textarea><%= @home.portfolio.second_caption %></textarea>
             </div>
         </div>
     </div>
