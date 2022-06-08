@@ -1,2 +1,16 @@
 <h1>Applicants#index</h1>
 <p>Find me in app/views/applicants/index.html.erb</p>
+
+<% @progress_status.each do |progress_status|%>
+    <div class="group-body">
+        <div class="group-text">
+            <p class="company-number">企業No.<%= progress_status.user_id %></p>
+            <div class="top-text">
+                <h2><%= progress_status.user_id.name %></h2>
+                <hr>
+                <p>担当者：<%= progress_status.user_id.name %></p>
+            </div>
+            
+        </div>
+    </div>
+<% end %>
