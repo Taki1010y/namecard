@@ -130,7 +130,7 @@
     margin: auto;
     margin-left: 140px;
     width: 1000px;
-    margin-bottom: 180px;
+    margin-bottom: 400px;
 }
 
 ///ここから1個目
@@ -180,10 +180,28 @@
 
 ///1個目終わり
 ///ここから2個目
+.work-content_second {
+    margin-top: 600px;
+    clear: left;
+    margin: auto;
+    margin-left: 140px;
+    width: 1000px;
+    margin-bottom: 600px;
+}
+
+.border-hr_under {
+    border-top: 1px solid white;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    margin-right: -10px;
+}
+
 .work-content-left-under {
     width: 300px;
     height: 300px;
-    float: left;
+    float: right;
+    margin-right: 135px;
 }
 
 .work-content-left-under img {
@@ -210,9 +228,65 @@
     height: 140px;
 }
 
+///2個目終わり
+///ここから3個目
 
+.border-hr_third {
+    border-top: 1px solid white;
+    width: 500px;
+    margin-left: -200px;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+}
 
+.work-content-right {
+    width: 1000px;
+    float: left;
+}
 
+.work-content-right h3{
+    font-size: 26px;
+    display: inline-block;
+    color: azure;
+}
+
+.work-content-right textarea{
+    width: 500px;
+    height: 160px;
+    margin-bottom: 60px;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    font-size: 16px;
+}
+
+.work-content-left-under {
+    width: 300px;
+    height: 300px;
+    float: left;
+    margin-right: 60px;
+}
+
+.work-content-left-under img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.work-content_third {
+    margin-top: 600px;
+    clear: left;
+    margin: auto;
+    margin-left: 140px;
+    width: 1000px;
+    margin-bottom: 400px;
+}
+
+////
+////
 .work-contents {
     color: black;
     display:flex;
@@ -255,7 +329,6 @@
 .work-content-right {
     width: 500px;
 }
-
 
 // 名刺作成前 #issue8
 // 名刺作成前 #issue8
