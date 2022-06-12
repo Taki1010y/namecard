@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get '/home', to: 'company_infos#index'
   
   resources 'home'
-  resources :companies
+  #resources :companies
   resources :company_infos do
     get '/apply', action: :apply, as: :apply
     member do

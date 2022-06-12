@@ -1,16 +1,19 @@
-<h1>Applicants#index</h1>
-<p>Find me in app/views/applicants/index.html.erb</p>
-
-<% @progress_status.each do |progress_status|%>
-    <div class="group-body">
-        <div class="group-text">
-            <p class="company-number">企業No.<%= progress_status.user_id %></p>
-            <div class="top-text">
-                <h2><%= progress_status.user_id.name %></h2>
-                <hr>
-                <p>担当者：<%= progress_status.user_id.name %></p>
+<div class="applicants">
+    <div class="applicants-group">
+        <% @progress_status.each do |progress_status| %>
+            <div class="applicants-body">
+                <div class="group-text">
+                    <p class="company-number">企業No.<%= progress_status.user_id %></p>
+                    <div class="top-text">
+                        <h2><%= progress_status.user.name %></h2>
+                        <hr class="applicants-hr">
+                        <p>学校名：<%= progress_status.user.name %></p>
+                    </div>
+                    <div class="button03">
+                        <p style="text-align:center"><%= link_to "名刺をみる", root_path, class: 'btn btn-default' %></p>
+                    </div>
+                </div>
             </div>
-            
-        </div>
+        <% end %>
     </div>
-<% end %>
+</div>
