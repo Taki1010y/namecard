@@ -11,6 +11,8 @@ class User < ApplicationRecord
   has_many :progress_status
   has_many :company_infos, through: :progress_status
 
+  has_one :home
+
   def already_favorited?(company_info)
     self.favorites.exists?(company_info_id: company_info.id)
   end
