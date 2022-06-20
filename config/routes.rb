@@ -1,7 +1,33 @@
 Rails.application.routes.draw do
+
+  get 'search/index'
   root :to => "web#index"
   get 'detail' => "detail#index"
   get 'register' => "register#index"
+  get '/home', to: 'company_infos#index'
+
+  resources 'home'
+  resources :companies
+  get 'company_infos/index'
+  resources :company_infos do
+    member do
+      get :favorite
+    end
+  end
+
+  resources :company_infos do
+    resource :favorites, only: [:create, :destroy]
+  end
+
+  
+
+  # get 'home' => "home#new"
+  # get 'home_index', to: 'home#index'
+  # post 'home_index', to: 'home#index'
+
+  # get 'namecard' => "namecard#new"
+  # post 'namecard_index', to: 'namecard#index' 
+  # get 'namecard_index', to: 'namecard#create' 
   
   devise_for :users, :controllers => {
     :registrations => 'users/registrations',
@@ -17,6 +43,7 @@ Rails.application.routes.draw do
     get "login", :to => "users/sessions#new"
     delete "logout", :to => "users/sessions#destroy"
     get "creation_screen", :to => "users/creations#new"
+    
   end
 
   devise_for :companies, :controllers => {
@@ -34,4 +61,11 @@ Rails.application.routes.draw do
     get "creation_screen_company", :to => "companies/creations#new"
   end
 
+  resources :users, only: [:edit, :update] do
+    member do
+      get  :favorite, :to => "users#favorite"
+    end
+  end
+
 end
+

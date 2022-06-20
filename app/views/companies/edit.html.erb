@@ -1,0 +1,10 @@
+<h1>Update Products</h1>
+    
+    <%= form_with model: @company do |f| %>
+    <%= f.text_field :company_name %>  
+    <%= f.text_field :name %>
+    <%= f.collection_select(:category_id, @categories, :id, :name) %>
+    <%= f.submit "Update" %>
+    <% end %>
+    
+    <%= link_to "Back", companies_path %>

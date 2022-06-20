@@ -1,0 +1,13 @@
+<div class="sach-area">
+    <% work_category_names.each do |work_category_name| %>
+    <h2><%= work_category_name %></h2>
+    <hr>
+    <% categories.each do |category| %>
+        <% if category.work_category_name == work_category_name %>
+        <label class="sach-sidebar-category-label">
+            <p>・<%= link_to category.genre_name, company_infos_path(category: category.id) %></p>
+        </label>
+        <% end %>
+    <% end %>
+    <% end %>
+</div>

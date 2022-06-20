@@ -4,6 +4,8 @@ class Company < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
 
+  belongs_to :category
+  
   validates :name, {presence: true}
   validates :postal_code, {presence: true, numericality: true}
   validates :email, {presence: true}

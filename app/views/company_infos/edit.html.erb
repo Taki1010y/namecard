@@ -1,0 +1,10 @@
+<div class="namecard-area">
+    <%= form_with model: @company_info ,url: company_info_path(@company_info),  method: :patch do |f| %>
+        <div class="profile-contents">
+            <div class="profile-content-right">
+                <%= f.text_field :name %>
+            </div>
+        </div>
+        <%= f.submit "変更する" %>
+    <% end %>
+</div>
