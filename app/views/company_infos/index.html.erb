@@ -1,11 +1,10 @@
 <div class="area">
-<p class="flash_text" style="color:green;"><%=   flash[:notice]  %></p>
+<p class="flash_text"><%=   flash[:notice]  %></p>
     <li class="favo">
         <%= link_to favorite_user_path(current_user.id), class: "nav-link" do %>
             <p>お気に入り一覧</p>
         <% end %>
     </li>
-    
     <div class="category_area">
         <%= render partial: "layouts/sidebar", locals: { categories: @categories, work_category_names: @work_category_names } %>
     </div>
@@ -22,7 +21,6 @@
                     <div class="group-body">
                         <div class="group-main">
                             <%= image_tag company_info.image.url %>
-                            
                         </div>
                         <div class="group-text">
                             <p class="company-number">企業No.<%= company_info.id %></p>
