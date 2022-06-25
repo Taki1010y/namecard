@@ -32,7 +32,7 @@ Rails.application.routes.draw do
     :sessions => 'users/sessions',
     :passwords => 'users/passwords',
     :confirmations => 'users/confirmations',
-    :creations => 'users/creations'
+    :creations => 'users/creations',
   }
 
   devise_scope :user do
@@ -41,7 +41,7 @@ Rails.application.routes.draw do
     get "login", :to => "users/sessions#new"
     delete "logout", :to => "users/sessions#destroy"
     get "creation_screen", :to => "users/creations#new"
-    
+    get 'users/success'
   end
 
   devise_for :companies, :controllers => {
