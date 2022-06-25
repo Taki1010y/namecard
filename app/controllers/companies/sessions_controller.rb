@@ -18,11 +18,11 @@ class Companies::SessionsController < Devise::SessionsController
   #   super
   # end
 
-  def after_sign_in_path_for(user)
+  def after_sign_in_path_for(company)
     products_path
   end
 
-  def after_sign_out_path_for(user)
+  def after_sign_out_path_for(company)
     root_path
   end
 
