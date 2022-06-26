@@ -1,0 +1,79 @@
+<div class="namecard-area">
+    <%= form_with model: @home ,url: home_path(@home),  method: :patch do |f| %>
+        <div class="profile-contents">
+            <div class="profile-content-right">
+                <%= f.text_field :name %>
+                <%= f.text_field :school %>
+                <%= f.text_field :department %>
+                <%= f.file_field :image %>
+                <hr>
+                <%= f.phone_field :phone %>
+                <%= f.email_field :address %>
+            </div>
+        </div>
+
+        <div class="profile-content-bottom">
+            <div class="profile-content-bottom-right">
+                <h3>favorite ---------</h3>
+                <%= f.text_field :favorite_a %>
+                <%= f.text_field :favorite_b %>
+                <%= f.text_field :favorite_c %>
+                <%= f.text_field :favorite_d %>
+            </div>
+        </div>
+        <div class="work-title">
+                <h1 class="title" style="text-align:center">作品/実績</h1>
+        </div>
+        <div class="work-contents">
+            <div class="work-content">
+                <%= f.fields_for :portfolio do |portfolio| %>
+                    <div class="work-content-right">
+                        <p>
+                            <%= portfolio.label :image, "実績写真1" %><br>
+                            <%= portfolio.file_field :image, size: "50"  %>
+                        </p>
+                        <p>
+                            <%= portfolio.label :title, "タイトル" %>
+                            <%= portfolio.text_field :title, size: "50" %>
+                        </p>
+                        <br>
+                        <p>
+                            <%= portfolio.label :caption, "見出し" %>
+                            <%= portfolio.text_field :caption, size: "50"  %>
+                        </p>
+                    </div>
+                    <div class="work-content-right">
+                        <p>
+                            <%= portfolio.label :first_image, "実績写真1" %><br>
+                            <%= portfolio.file_field :first_image, size: "50"  %>
+                        </p>
+                        <p>
+                            <%= portfolio.label :first_title, "タイトル" %>
+                            <%= portfolio.text_field :first_title, size: "50" %>
+                        </p>
+                        <br>
+                        <p>
+                            <%= portfolio.label :first_caption, "見出し" %>
+                            <%= portfolio.text_field :first_caption, size: "50"  %>
+                        </p>
+                        <div class="work-content-right">
+                        <p>
+                            <%= portfolio.label :second_image, "実績写真1" %><br>
+                            <%= portfolio.file_field :second_image, size: "50"  %>
+                        </p>
+                        <p>
+                            <%= portfolio.label :second_title, "タイトル" %>
+                            <%= portfolio.text_field :second_title, size: "50" %>
+                        </p>
+                        <br>
+                        <p>
+                            <%= portfolio.label :second_caption, "見出し" %>
+                            <%= portfolio.text_field :second_caption, size: "50"  %>
+                        </p>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+        <%= f.submit "変更する" %>
+    <% end %>
+</div>

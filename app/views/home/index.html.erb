@@ -1,0 +1,47 @@
+<table>
+    <thead>
+        <tr>
+            <th>名前</th>
+            <th>タイトル</th>
+        </tr>
+    </thead>
+
+    <% @homes.each do |home| %>
+        <tr>
+            <td><%= home.name %></td>
+            <td><%= home.school %></td>
+            <td><%= home.department %></td>
+            <td><%= home.address %></td>
+            <td><%= home.phone %></td>
+            <td><%= image_tag @book.img.url %><td>
+            <td><%= home.favorite %></td>
+        </tr>
+    <% end %>
+</table>
+
+<div class="work-area">
+    <div class="work-top">
+        <h1 style="text-align:center">- 作品/実績 -</h1>
+    </div>
+    <div class="title-area">
+        <% @homes.each do |home| %>
+            <div class="title-area">
+                <h3><%= home.title %></h3>
+                <p><%= home.caption %></p>
+            </div>
+        <% end %>
+    </div>
+</div>
+
+<div class="buttonarea-approach">
+    <h2 style="text-align:center">approach</h2>
+
+    <div class="button-group">
+        <div class="button03">
+            <p style="text-align:center"><%= link_to "募集している企業を探す", root_path, class: 'btn btn-default' %></p>
+        </div>
+        <div class="button03">
+            <p style="text-align:center"><%= link_to "お気に入り一覧", root_path, class: 'btn btn-default' %></p>
+        </div>
+    </div>
+</div>
