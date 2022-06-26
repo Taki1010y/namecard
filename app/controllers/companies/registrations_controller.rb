@@ -66,6 +66,6 @@ class Companies::RegistrationsController < Devise::RegistrationsController
   end
 
   def after_sign_up_path_for(resource)
-    users_success_path
+    companies_success_path
     end
 end
