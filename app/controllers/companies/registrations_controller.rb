@@ -11,6 +11,7 @@ class Companies::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
+    binding.pry
     super
   end
 
@@ -25,9 +26,9 @@ class Companies::RegistrationsController < Devise::RegistrationsController
   end
 
   # DELETE /resource
-  # def destroy
-  #   super
-  # end
+  def destroy
+    super
+  end
 
   def verify
   end
@@ -46,13 +47,13 @@ class Companies::RegistrationsController < Devise::RegistrationsController
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
     devise_parameter_sanitizer.permit(
-      :sign_up, keys: [ :name, :postal_code, :address, :phone, :email, :password, :password_confirmation ])
+      :sign_up, keys: [ :name, :postal_code, :address, :phone, :email, :password, :password_confirmation, :company_info_id ])
   end
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_account_update_params
     devise_parameter_sanitizer.permit(
-      :account_update, keys: [ :name, :postal_code, :address, :phone, :email, :password, :password_confirmation ])
+      :account_update, keys: [ :name, :postal_code, :address, :phone, :email, :password, :password_confirmation, :company_info_id ])
   end
 
   # The path used after sign up.

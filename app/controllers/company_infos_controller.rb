@@ -18,12 +18,15 @@ end
 def create
     @company_info = CompanyInfo.new(company_info_params)
     if @company_info.save
-        redirect_to company_info_path(@company_info)
-        binding.pry
+        redirect_to applicants_path
     else
         render 'new'
     end
 end
+
+# if @company_info.save
+#     redirect_to company_info_path(@company_info)
+# else
 
 def edit
 end

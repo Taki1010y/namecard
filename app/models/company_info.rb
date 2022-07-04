@@ -14,7 +14,9 @@ class CompanyInfo < ApplicationRecord
         end
     }
 
-    belongs_to :user
+    has_many :companies
+
+    # belongs_to :user
     has_many :favorites, dependent: :destroy
 
     has_many :progress_status
