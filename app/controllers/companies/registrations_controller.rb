@@ -11,9 +11,6 @@ class Companies::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
-    # binding.pry
-    # company_info_id = CompanyInfo.find(company_info_id: params[:company_info_id])
-    # company_info_id = CompanyInfo.find_by(code: params[:company][:company_info_id]).id
     super
   end
 
