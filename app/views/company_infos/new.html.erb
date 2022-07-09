@@ -38,6 +38,11 @@
             <%= f.file_field :image %>
         </div>
 
+        <div class="form-group">
+            <%= f.label "会社登録用ID" %>
+            <%= f.text_field :company_info_id, class: "form-control" %>
+        </div>
+
         <%= f.submit "会社を登録", class:"btn btn-success" %>
     <% end %>
     </div>
