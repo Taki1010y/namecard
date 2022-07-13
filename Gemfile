@@ -40,7 +40,7 @@ end
 # 本番環境ではPostgresqlを使う
 group :production do
   # postgresql
-  gem 'pg'
+  gem 'pg', '0.20.0'
 end
 
 # Use Puma as the app server
