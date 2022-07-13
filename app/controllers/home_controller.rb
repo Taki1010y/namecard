@@ -8,7 +8,7 @@ class HomeController < ApplicationController
   def create
     @home = Home.new(home_params)
     # @home.user_id = current_user.id
-    binding.pry
+    # binding.pry
     if @home.save
       redirect_to home_path(@home)
     else
