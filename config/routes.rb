@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root :to => "web#index"
   get 'detail' => "detail#index"
   get 'register' => "register#index"
-  get '/home', to: 'company_infos#index'
+  # get '/home', to: 'company_infos#index'
   
   resources 'home'
   #resources :companies
