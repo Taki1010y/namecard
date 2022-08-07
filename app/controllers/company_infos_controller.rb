@@ -1,5 +1,5 @@
 class CompanyInfosController < ApplicationController
-    before_action :set_company_info, only: [:favorite, :show, :edit, :update,]
+    before_action :set_company_info, only: [:favorite, :show, :edit, :update]
 
 def index
     @company_infos = CompanyInfo.display_list(category_params, params[:page])

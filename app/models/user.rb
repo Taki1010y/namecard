@@ -12,7 +12,7 @@ class User < ApplicationRecord
   has_many :company_infos, through: :progress_status
 
   # has_one :home
-  has_many :homes, dependent: :destroy
+  has_one :home, dependent: :destroy
 
   def already_favorited?(company_info)
     self.favorites.exists?(company_info_id: company_info.id)

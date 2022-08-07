@@ -7,7 +7,7 @@ class ApplicantsController < ApplicationController
 
   def show
     @user = @company_info.users.find(params[:id])
-    @home = user.home
+    @home = @user.home
   end
 
   private
