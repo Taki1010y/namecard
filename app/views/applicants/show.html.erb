@@ -13,58 +13,5 @@
             
         </div>
     </div>
-
-    <div class="profile-content-bottom">
-        <div class="profile-content-bottom-right">
-            <h3>Favorite</h3>
-            <hr class="profile-content-hr">
-            <p>・<%= @home.favorite_a %></p>
-            <p>・<%= @home.favorite_b %></p>
-            <p>・<%= @home.favorite_c %></p>
-            <p>・<%= @home.favorite_d %></p>
-        </div>
-        <div class="profile-content-left">
-            <%= image_tag @home.favorite_image.url %>
-        </div>
-    </div>
-
-    <h1 class="title" style="text-align:center">Portfolio</h1>
-    <div class="work-contents">
-        <div class="aaa">
-
-            <div class="work-content">
-                <div class="work-content-left">
-                    <%= image_tag @home.portfolio.image.url %>
-                </div>
-                <div class="work-content-right">
-                    <hr class="border-hr">
-                    <h3 style="text-align:center"><%= @home.portfolio.title %></h3>
-                    <textarea><%= @home.portfolio.caption %></textarea>
-                </div>
-            </div>
-
-            <div class="work-content_second">
-                <div class="work-content-right">
-                    <hr class="border-hr_under">
-                    <h3><%= @home.portfolio.first_title %></h3>
-                    <textarea><%= @home.portfolio.first_caption %></textarea>
-                </div>
-                <div class="work-content-left-under">
-                    <%= image_tag @home.portfolio.first_image.url %>
-                </div>
-            </div>
-
-            <div class="work-content_third">
-                <div class="work-content-left-under">
-                    <%= image_tag @home.portfolio.second_image.url %>
-                </div>
-                <div class="work-content-right-under">
-                    <hr class="border-hr_third">
-                    <h3 style="text-align:center"><%= @home.portfolio.second_title %></h3>
-                    <textarea><%= @home.portfolio.second_caption %></textarea>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 

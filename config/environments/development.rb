@@ -67,6 +67,9 @@ Rails.application.configure do
       port: 3000
     }
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = { address: "127.0.0.1", port: 1025}
+
     config.action_mailer.asset_host = 'http://localhost:3000'
 
     # mail setting

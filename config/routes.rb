@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   get 'detail' => "detail#index"
   get 'register' => "register#index"
   get 'company_infos', to: 'company_infos#index'
-  
+  get 'mails/index'
+  get 'mails/send_mail'
+
   resources 'home'
   #resources :companies
   resources :company_infos do
