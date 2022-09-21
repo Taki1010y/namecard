@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   root :to => "web#index"
   get 'detail' => "detail#index"
   get 'register' => "register#index"
+
+  resources 'home'
   
   devise_for :users, :controllers => {
     :registrations => 'users/registrations',
@@ -17,6 +19,8 @@ Rails.application.routes.draw do
     get "login", :to => "users/sessions#new"
     delete "logout", :to => "users/sessions#destroy"
     get "creation_screen", :to => "users/creations#new"
+    
+    
   end
 
   devise_for :companies, :controllers => {
@@ -24,6 +28,7 @@ Rails.application.routes.draw do
     :sessions => 'companies/sessions',
     :passwords => 'companies/passwords',
     :confirmations => 'companies/confirmations',
+    :creations => 'companies/creations'
   }
 
   devise_scope :company do
