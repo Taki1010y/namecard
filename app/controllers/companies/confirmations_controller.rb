@@ -17,7 +17,11 @@ class Companies::ConfirmationsController < Devise::ConfirmationsController
   # end
 
   # protected
+  protected
 
+  def after_confirmation_path_for(resource_name, resource)
+    companies_success_path
+  end
   # The path used after resending confirmation instructions.
   # def after_resending_confirmation_instructions_path_for(resource_name)
   #   super(resource_name)

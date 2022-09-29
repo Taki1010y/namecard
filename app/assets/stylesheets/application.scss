@@ -1,0 +1,78 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+    @import "bootstrap";
+
+
+    .pagination {
+        justify-content: center;
+        width: 300px;
+    }
+
+    .sach-favorite-button {
+        float: left;
+        width: 200px;
+        line-height: 35px;
+        border-radius: 2px;
+        border-radius: 20px 20px 20px 20px;
+        border: solid 1px #0fbe9f;
+        background-color: #ffffff;
+    }
+    
+    .text-favorite {
+        color: #0fbe9f;
+        padding-left: 20px;
+    }
+
+    .sach-sidebar-category-label {
+        width: 200px;
+        height: 20px;
+        font-size: 13px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        display: inline-block;
+        letter-spacing: normal;
+        color: #ffffff;
+        }
+        
+    .sach-area {
+        width: 260px;
+        margin-top: 140px;
+        padding-left: 40px;
+        padding-bottom: 60px;
+        float: left;
+        background-color: #0fbe9f;
+    }
+
+    .sach-area h2{
+        color: #ffffff;
+        margin: 0;
+        margin-top: 30px;
+        padding: 0;
+        margin-left: 10px;
+    }
+
+    .sach-area hr {
+        width: 240px;
+        margin-left: -12px;
+        margin-top: -2px;
+    }
+
+    .samazon-favorite-add-cart {
+        border-radius: 2px;
+        background-color: #0fbe9f;
+    }

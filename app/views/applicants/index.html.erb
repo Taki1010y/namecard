@@ -1,0 +1,29 @@
+<div class="applicants">
+    <h1>エントリー一覧</h1>
+    <div class="applicants-group">
+        <% @users.each do |user| %>
+            <div class="applicants-body">
+                <div class="group-text">
+                    <div class="top-text">
+                        <h2><%= user.home.name %></h2>
+                        <hr class="applicants-hr">
+                        <p>学校名：<%= user.home.school %></p>
+                        <h2><%= user.home.id %></h2>
+                    </div>
+                    <div class="button03">
+                        <p style="text-align:center"><%= link_to "名刺をみる", applicant_path(user), class: 'btn btn-default' %></p>
+                    </div>
+                    <div class="button03">
+                        <p style="text-align:center">
+                            <%= mail_to user.email, 'メールを送る',
+                                from: user.email ,
+                                subject: "#{user.home.name}様にメッセージを送信できます。" ,
+                                body: "#{user.home.name}様に会社説明会や面接の提案をして見ましょう。←※左記文章は削除してください。",
+                                class: 'btn btn-default' %>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="favorite_contents">
+    <div class="favorite_groups">
+        <div class="favorite_tittle">
+        <h1>お気に入り一覧</h1>
+            <div class="favorite_group">
+                <% @favorites.each do |favorite| %>
+                    <div class="favorite_group_items">
+                        <div class="favorite_group_item">
+                            <div class="favorite_text">
+                                <h3 class="favorite-item-text">・<%= favorite.name %></h3>
+                            </div>
+                            <hr class="line">
+                        </div>
+                        <div class="favorite-item-btn">
+                            <%= link_to company_info_path(favorite), class: "w-25" do %>
+                                <h5 class="company_back">詳細へ</h5>
+                            <% end %>
+                            <%= link_to company_info_path(favorite), class: "samazon-favorite-item-delete" do %>
+                                <h5 class="company_back">削除</h5>
+                            <% end %>
+                        </div>
+                    </div>
+                <% end %>
+            </div>
+            <%= link_to "全て", company_infos_path ,class: "list_link" %>
+        </div>
+    </div>
+</div>

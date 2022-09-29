@@ -13,13 +13,38 @@ gem 'jquery-rails'
 # 環境変数を使用できる
 gem 'dotenv-rails'
 
+# socialiizatioinを使用できる
+gem 'socialization'
+
 # 画像のアップロードができる
 gem 'carrierwave'
 
+# ページネーションを実装できる
+gem 'kaminari'
+
+# それらしい値を自動生成できる
+#gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+
+gem 'faker'
+
+gem 'rinku'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', ' 5.2.5'
+
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
+# 開発・テスト環境ではSQLite3を使う
+group :development, :test do
+  gem 'sqlite3'
+end
+
+# 本番環境ではPostgresqlを使う
+group :production do
+  # postgresql
+  gem 'pg', '0.20.0'
+end
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -45,6 +70,11 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+# group :production do
+#   # postgresql
+#   gem 'pg'
+# end
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

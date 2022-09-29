@@ -1,0 +1,41 @@
+.step-area {
+    background: linear-gradient(rgb(71,169,210), rgb(70,234,181));
+    padding-top: 250px;
+    padding-bottom: 300px;
+}
+
+.step-caption_area {
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 120px;
+    margin-bottom: 250px;
+    padding: 40px 0;
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.button03 {
+    display:inline-block;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.button03 p {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 1em 2em;
+    width: 200px;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: rgb(255,110,0);
+    border-radius: 50vh;
+}
+
+.caption-image {
+    width: 30%;
+    margin-left: 40px;
+    margin-bottom: 40px;
+}
+

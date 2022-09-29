@@ -1,16 +1,42 @@
 Rails.application.routes.draw do
+  resources 'applicants', only: [:index, :show]
+  get 'search/index'
   root :to => "web#index"
   get 'detail' => "detail#index"
   get 'register' => "register#index"
+  get 'company_infos', to: 'company_infos#index'
+  get 'mails/index'
+  get 'mails/send_mail'
 
   resources 'home'
+
+  #resources :companies
+  resources :company_infos do
+    get '/apply', action: :apply, as: :apply
+    member do
+      get :favorite
+    end
+  end
+
+  resources :company_infos do
+    resource :favorites, only: [:create, :destroy]
+  end
+
+  # get 'home' => "home#new"
+  # get 'home_index', to: 'home#index'
+  # post 'home_index', to: 'home#index'
+
+  # get 'namecard' => "namecard#new"
+  # post 'namecard_index', to: 'namecard#index' 
+  # get 'namecard_index', to: 'namecard#create' 
+
   
   devise_for :users, :controllers => {
     :registrations => 'users/registrations',
     :sessions => 'users/sessions',
     :passwords => 'users/passwords',
     :confirmations => 'users/confirmations',
-    :creations => 'users/creations'
+    :creations => 'users/creations',
   }
 
   devise_scope :user do
@@ -19,8 +45,7 @@ Rails.application.routes.draw do
     get "login", :to => "users/sessions#new"
     delete "logout", :to => "users/sessions#destroy"
     get "creation_screen", :to => "users/creations#new"
-    
-    
+    get 'users/success'
   end
 
   devise_for :companies, :controllers => {
@@ -37,6 +62,12 @@ Rails.application.routes.draw do
     get "login_company", :to => "companies/sessions#new"
     delete "logout_company", :to => "companies/sessions#destroy"
     get "creation_screen_company", :to => "companies/creations#new"
+    get 'companies/success'
   end
 
+  resources :users, only: [:edit, :update] do
+    member do
+      get  :favorite, :to => "users#favorite"
+    end
+  end
 end
