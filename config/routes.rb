@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'mails/send_mail'
 
   resources 'home'
+
   #resources :companies
   resources :company_infos do
     get '/apply', action: :apply, as: :apply
@@ -28,6 +29,7 @@ Rails.application.routes.draw do
   # get 'namecard' => "namecard#new"
   # post 'namecard_index', to: 'namecard#index' 
   # get 'namecard_index', to: 'namecard#create' 
+
   
   devise_for :users, :controllers => {
     :registrations => 'users/registrations',
@@ -51,6 +53,7 @@ Rails.application.routes.draw do
     :sessions => 'companies/sessions',
     :passwords => 'companies/passwords',
     :confirmations => 'companies/confirmations',
+    :creations => 'companies/creations'
   }
 
   devise_scope :company do

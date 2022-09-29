@@ -3,12 +3,11 @@ class HomeController < ApplicationController
   
   def new
     @home = Home.new
+    @home.build_portfolio
   end
 
   def create
     @home = Home.new(home_params)
-    # @home.user_id = current_user.id
-    # binding.pry
     if @home.save
       redirect_to home_path(@home)
     else
@@ -17,15 +16,26 @@ class HomeController < ApplicationController
   end
 
 def show
+  @home = Home.find(params[:id])
 end
 
-def company_infos
-  public_method(:index).super_method.call
+def edit
+  @home = Home.find(params[:id])
+end
+
+def update
+  @home = Home.find(params[:id])
+
+  if @home.update(home_params)
+    redirect_to home_path(@home)
+  else
+    render 'edit'
+  end
 end
 
 private
   def home_params
-    params.require(:home).permit(:name, :school, :address, :phone, :department, :favorite_a, :favorite_b, :favorite_c, :favorite_d, :title, :caption, :image, :user_id)
+    params.require(:home).permit(:name, :school, :address, :phone, :department, :favorite_a, :favorite_b, :favorite_c, :favorite_d, :image, :favorite_image, portfolio_attributes: [:id, :title, :first_title, :first_caption, :second_title, :second_caption, :caption, :image, :first_image, :second_image])
   end
 
   def set_home

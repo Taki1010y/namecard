@@ -5,8 +5,9 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-/.bundle
-
+.bundle
+.DS_Store
+/.heroku
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
@@ -27,6 +28,7 @@
 /public/assets
 /public/uploads
 .byebug_history
+/public/uploads
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key

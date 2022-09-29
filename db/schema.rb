@@ -70,8 +70,11 @@ ActiveRecord::Schema.define(version: 2022_09_03_115544) do
     t.string "address"
     t.string "phone"
     t.string "company_name"
+
     t.integer "company_info_id"
     t.index ["company_info_id"], name: "index_companies_on_company_info_id"
+    t.index ["category_id"], name: "index_companies_on_category_id"
+
     t.index ["email"], name: "index_companies_on_email", unique: true
     t.index ["reset_password_token"], name: "index_companies_on_reset_password_token", unique: true
   end
@@ -131,6 +134,7 @@ ActiveRecord::Schema.define(version: 2022_09_03_115544) do
     t.string "image"
     t.string "favorite_image"
     t.integer "user_id"
+
   end
 
   create_table "likes", force: :cascade do |t|
@@ -167,14 +171,15 @@ ActiveRecord::Schema.define(version: 2022_09_03_115544) do
     t.string "first_image"
     t.string "second_image"
     t.index ["home_id"], name: "index_portfolios_on_home_id", unique: true
-  end
 
+  end
   create_table "progress_statuses", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "company_info_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id", "company_info_id"], name: "index_progress_statuses_on_user_id_and_company_info_id", unique: true
+
   end
 
   create_table "users", force: :cascade do |t|
