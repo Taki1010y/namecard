@@ -5,6 +5,7 @@ class Company < ApplicationRecord
           :recoverable, :rememberable, :validatable, :confirmable
 
   belongs_to :company_info
+  belongs_to :category
   
   validates :name, {presence: true}
   validates :postal_code, {presence: true, numericality: true}
