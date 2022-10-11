@@ -22,3 +22,8 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+
+// フラッシュメッセージ
+$(function(){
+    $('.flash_text').fadeOut(4000);  //４秒かけて消えていく
+    });

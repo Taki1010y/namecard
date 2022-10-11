@@ -5,6 +5,11 @@
             <p>お気に入り一覧</p>
         <% end %>
     </li>
+    <div class="namecard">
+        <%= link_to home_path(:id), class: "nav-link" do %>
+            <p>名刺ページに戻る</p>
+        <% end %>
+    </div>
     <div class="category_area">
         <%= render partial: "layouts/sidebar", locals: { categories: @categories, work_category_names: @work_category_names } %>
     </div>

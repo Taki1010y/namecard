@@ -76,10 +76,10 @@
 
     <div class="button-group">
         <div class="button03">
-            <p style="text-align:center"><%= link_to "募集している企業を探す", root_path, class: 'btn btn-default' %></p>
+            <p style="text-align:center"><%= link_to "募集している企業を探す", company_infos_path, class: 'btn btn-default' %></p>
         </div>
         <div class="button03">
-            <p style="text-align:center"><%= link_to "お気に入り一覧", root_path, class: 'btn btn-default' %></p>
+            <p style="text-align:center"><%= link_to favorite_user_path(current_user.id), class: "nav-link" do %></p>
         </div>
     </div>
 </div>
