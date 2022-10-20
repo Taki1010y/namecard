@@ -5,7 +5,6 @@ class CreateCompanyInfos < ActiveRecord::Migration[5.2]
       t.string :address, null: false
       t.string :access
       t.string :url
-      t.integer :company_id, index: true
       t.integer :category_id
 
       t.timestamps

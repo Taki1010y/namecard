@@ -1,6 +1,6 @@
 class CompanyInfosController < ApplicationController
     before_action :set_company_info, only: [:favorite, :show, :edit, :update]
-    before_action :authenticate_user!
+
 
 def index
     @company_infos = CompanyInfo.display_list(category_params, params[:page])
@@ -19,7 +19,7 @@ end
 def create
     @company_info = CompanyInfo.new(company_info_params)
     if @company_info.save
-        redirect_to applicants_path
+        redirect_to new_company_registration_path
     else
         render 'new'
     end
@@ -65,7 +65,7 @@ private
     end
 
     def company_info_params
-        params.require(:company_info).permit(:name, :address, :access, :url, :company_id, :category_id, :image)
+        params.require(:company_info).permit(:name, :address, :access, :url, :category_id, :image) #:company_id削除,
     end
 
     def category_params
